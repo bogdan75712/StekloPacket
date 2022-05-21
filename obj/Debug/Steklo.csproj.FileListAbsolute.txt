@@ -1,0 +1,13 @@
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\bin\Debug\Steklo.exe.config
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\bin\Debug\Steklo.exe
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\bin\Debug\Steklo.pdb
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.csproj.AssemblyReference.cache
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.csproj.SuggestedBindingRedirects.cache
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.Form_Auth.resources
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.Properties.Resources.resources
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.csproj.GenerateResource.cache
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.csproj.CoreCompileInputs.cache
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.exe
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.pdb
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.DirectorMenu.resources
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.ManagerMenu.resources
