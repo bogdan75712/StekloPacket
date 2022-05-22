@@ -15,10 +15,13 @@ namespace Steklo
         StekloPacketDataSet.UsersDataTable dataUsers;
         bool visible_pass = false;
         int error_input;
+        
         public Form_Auth()
         {
             InitializeComponent();
             dataUsers = this.usersTableAdapter1.GetData();
+            textBox_login.Text = "manager1@mail.ru";
+            textBox_pass.Text = "manager1";
         }
 
         private void button_enter_Click(object sender, EventArgs e)

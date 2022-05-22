@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddHomeType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddHomeType.Designer.cs">
+      <DependentUpon>AddHomeType.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClassTotal.cs" />
     <Compile Include="DirectorMenu.cs">
       <SubType>Form</SubType>
@@ -78,6 +84,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StekloPacketDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddHomeType.resx">
+      <DependentUpon>AddHomeType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DirectorMenu.resx">
       <DependentUpon>DirectorMenu.cs</DependentUpon>
     </EmbeddedResource>

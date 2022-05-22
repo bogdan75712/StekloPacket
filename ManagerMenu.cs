@@ -24,7 +24,10 @@ namespace Steklo
 
         private void button_make_order_Click(object sender, EventArgs e)
         {
-
+            MakeOrder makeOrder = new MakeOrder();
+            this.Hide();
+            makeOrder.ShowDialog();
+            this.Show();
         }
     }
 }

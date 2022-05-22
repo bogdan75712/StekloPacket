@@ -62,7 +62,7 @@
             // button_exit
             // 
             this.button_exit.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_exit.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_exit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_exit.Location = new System.Drawing.Point(330, 3);
@@ -94,7 +94,7 @@
             // button_enter
             // 
             this.button_enter.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_enter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_enter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_enter.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_enter.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_enter.Location = new System.Drawing.Point(150, 360);

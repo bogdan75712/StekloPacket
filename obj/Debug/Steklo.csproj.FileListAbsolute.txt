@@ -11,3 +11,5 @@ C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.exe
 C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.pdb
 C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.DirectorMenu.resources
 C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.ManagerMenu.resources
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.MakeOrder.resources
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.AddHomeType.resources
