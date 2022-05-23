@@ -47,12 +47,12 @@
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_surname = new System.Windows.Forms.TextBox();
             this.groupBox_window = new System.Windows.Forms.GroupBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox_rigthsash = new System.Windows.Forms.ComboBox();
+            this.comboBox_centrsash = new System.Windows.Forms.ComboBox();
+            this.comboBox_leftsash = new System.Windows.Forms.ComboBox();
+            this.comboBox_color = new System.Windows.Forms.ComboBox();
+            this.comboBox_sill = new System.Windows.Forms.ComboBox();
+            this.comboBox_glazingtype = new System.Windows.Forms.ComboBox();
             this.comboBox_manufacturer = new System.Windows.Forms.ComboBox();
             this.comboBox_profiletype = new System.Windows.Forms.ComboBox();
             this.textBox_height = new System.Windows.Forms.TextBox();
@@ -72,12 +72,23 @@
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox_windowstype = new System.Windows.Forms.ComboBox();
             this.comboBox_hometype = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label_cost = new System.Windows.Forms.Label();
             this.clientTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.ClientTableAdapter();
             this.homeTypeTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.HomeTypeTableAdapter();
             this.windowsTypeTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.WindowsTypeTableAdapter();
             this.windowsTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.WindowsTableAdapter();
             this.profileTypeTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.ProfileTypeTableAdapter();
+            this.manufacturerTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.ManufacturerTableAdapter();
+            this.glazingTypeTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.GlazingTypeTableAdapter();
+            this.colorsTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.ColorsTableAdapter();
+            this.windowSillTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.WindowSillTableAdapter();
+            this.mediumSashTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.MediumSashTableAdapter();
+            this.leftSashTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.LeftSashTableAdapter();
+            this.rightSashTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.RightSashTableAdapter();
+            this.label_height = new System.Windows.Forms.Label();
+            this.label_width = new System.Windows.Forms.Label();
+            this.label_widthtype = new System.Windows.Forms.Label();
+            this.label_heighttype = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_client.SuspendLayout();
@@ -258,12 +269,16 @@
             // 
             // groupBox_window
             // 
-            this.groupBox_window.Controls.Add(this.comboBox10);
-            this.groupBox_window.Controls.Add(this.comboBox9);
-            this.groupBox_window.Controls.Add(this.comboBox8);
-            this.groupBox_window.Controls.Add(this.comboBox7);
-            this.groupBox_window.Controls.Add(this.comboBox6);
-            this.groupBox_window.Controls.Add(this.comboBox5);
+            this.groupBox_window.Controls.Add(this.label_heighttype);
+            this.groupBox_window.Controls.Add(this.label_widthtype);
+            this.groupBox_window.Controls.Add(this.label_width);
+            this.groupBox_window.Controls.Add(this.label_height);
+            this.groupBox_window.Controls.Add(this.comboBox_rigthsash);
+            this.groupBox_window.Controls.Add(this.comboBox_centrsash);
+            this.groupBox_window.Controls.Add(this.comboBox_leftsash);
+            this.groupBox_window.Controls.Add(this.comboBox_color);
+            this.groupBox_window.Controls.Add(this.comboBox_sill);
+            this.groupBox_window.Controls.Add(this.comboBox_glazingtype);
             this.groupBox_window.Controls.Add(this.comboBox_manufacturer);
             this.groupBox_window.Controls.Add(this.comboBox_profiletype);
             this.groupBox_window.Controls.Add(this.textBox_height);
@@ -283,7 +298,7 @@
             this.groupBox_window.Controls.Add(this.label8);
             this.groupBox_window.Controls.Add(this.comboBox_windowstype);
             this.groupBox_window.Controls.Add(this.comboBox_hometype);
-            this.groupBox_window.Controls.Add(this.label7);
+            this.groupBox_window.Controls.Add(this.label_cost);
             this.groupBox_window.Font = new System.Drawing.Font("Candara Light", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox_window.Location = new System.Drawing.Point(295, 124);
             this.groupBox_window.Name = "groupBox_window";
@@ -292,53 +307,61 @@
             this.groupBox_window.TabStop = false;
             this.groupBox_window.Text = "Добавление окна";
             // 
-            // comboBox10
+            // comboBox_rigthsash
             // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(171, 452);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(121, 29);
-            this.comboBox10.TabIndex = 25;
+            this.comboBox_rigthsash.FormattingEnabled = true;
+            this.comboBox_rigthsash.Location = new System.Drawing.Point(177, 453);
+            this.comboBox_rigthsash.Name = "comboBox_rigthsash";
+            this.comboBox_rigthsash.Size = new System.Drawing.Size(196, 29);
+            this.comboBox_rigthsash.TabIndex = 25;
+            this.comboBox_rigthsash.SelectionChangeCommitted += new System.EventHandler(this.comboBox_rigthsash_SelectionChangeCommitted);
             // 
-            // comboBox9
+            // comboBox_centrsash
             // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(207, 425);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(121, 29);
-            this.comboBox9.TabIndex = 24;
+            this.comboBox_centrsash.FormattingEnabled = true;
+            this.comboBox_centrsash.Location = new System.Drawing.Point(177, 421);
+            this.comboBox_centrsash.Name = "comboBox_centrsash";
+            this.comboBox_centrsash.Size = new System.Drawing.Size(196, 29);
+            this.comboBox_centrsash.TabIndex = 24;
+            this.comboBox_centrsash.SelectedIndexChanged += new System.EventHandler(this.comboBox_centrsash_SelectedIndexChanged);
+            this.comboBox_centrsash.SelectionChangeCommitted += new System.EventHandler(this.comboBox_centrsash_SelectionChangeCommitted);
             // 
-            // comboBox8
+            // comboBox_leftsash
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(136, 382);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(121, 29);
-            this.comboBox8.TabIndex = 23;
+            this.comboBox_leftsash.FormattingEnabled = true;
+            this.comboBox_leftsash.Location = new System.Drawing.Point(177, 388);
+            this.comboBox_leftsash.Name = "comboBox_leftsash";
+            this.comboBox_leftsash.Size = new System.Drawing.Size(196, 29);
+            this.comboBox_leftsash.TabIndex = 23;
+            this.comboBox_leftsash.SelectionChangeCommitted += new System.EventHandler(this.comboBox_leftsash_SelectionChangeCommitted);
             // 
-            // comboBox7
+            // comboBox_color
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(87, 318);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(121, 29);
-            this.comboBox7.TabIndex = 22;
+            this.comboBox_color.FormattingEnabled = true;
+            this.comboBox_color.Location = new System.Drawing.Point(129, 318);
+            this.comboBox_color.Name = "comboBox_color";
+            this.comboBox_color.Size = new System.Drawing.Size(121, 29);
+            this.comboBox_color.TabIndex = 22;
+            this.comboBox_color.SelectionChangeCommitted += new System.EventHandler(this.comboBox_color_SelectionChangeCommitted);
             // 
-            // comboBox6
+            // comboBox_sill
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(404, 372);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 29);
-            this.comboBox6.TabIndex = 21;
+            this.comboBox_sill.FormattingEnabled = true;
+            this.comboBox_sill.Location = new System.Drawing.Point(129, 353);
+            this.comboBox_sill.Name = "comboBox_sill";
+            this.comboBox_sill.Size = new System.Drawing.Size(121, 29);
+            this.comboBox_sill.TabIndex = 21;
+            this.comboBox_sill.SelectionChangeCommitted += new System.EventHandler(this.comboBox_sill_SelectionChangeCommitted);
             // 
-            // comboBox5
+            // comboBox_glazingtype
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(162, 283);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(150, 29);
-            this.comboBox5.TabIndex = 20;
+            this.comboBox_glazingtype.FormattingEnabled = true;
+            this.comboBox_glazingtype.Location = new System.Drawing.Point(162, 283);
+            this.comboBox_glazingtype.Name = "comboBox_glazingtype";
+            this.comboBox_glazingtype.Size = new System.Drawing.Size(272, 29);
+            this.comboBox_glazingtype.TabIndex = 20;
+            this.comboBox_glazingtype.SelectedIndexChanged += new System.EventHandler(this.comboBox_glazingtype_SelectedIndexChanged);
+            this.comboBox_glazingtype.SelectionChangeCommitted += new System.EventHandler(this.comboBox_glazingtype_SelectionChangeCommitted);
             // 
             // comboBox_manufacturer
             // 
@@ -363,6 +386,8 @@
             this.textBox_height.Name = "textBox_height";
             this.textBox_height.Size = new System.Drawing.Size(100, 28);
             this.textBox_height.TabIndex = 17;
+            this.textBox_height.TextChanged += new System.EventHandler(this.textBox_height_TextChanged);
+            this.textBox_height.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_height_KeyPress);
             // 
             // textBox_width
             // 
@@ -370,6 +395,8 @@
             this.textBox_width.Name = "textBox_width";
             this.textBox_width.Size = new System.Drawing.Size(100, 28);
             this.textBox_width.TabIndex = 16;
+            this.textBox_width.TextChanged += new System.EventHandler(this.textBox_width_TextChanged);
+            this.textBox_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_width_KeyPress);
             // 
             // button_no_hometype
             // 
@@ -406,7 +433,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(50, 452);
+            this.label17.Location = new System.Drawing.Point(18, 456);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(124, 21);
             this.label17.TabIndex = 12;
@@ -415,16 +442,16 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(50, 428);
+            this.label16.Location = new System.Drawing.Point(5, 424);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(151, 21);
+            this.label16.Size = new System.Drawing.Size(166, 21);
             this.label16.TabIndex = 11;
-            this.label16.Text = "Центровая створка";
+            this.label16.Text = "Центральная створка";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(23, 385);
+            this.label15.Location = new System.Drawing.Point(18, 388);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(115, 21);
             this.label15.TabIndex = 10;
@@ -460,7 +487,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(277, 358);
+            this.label11.Location = new System.Drawing.Point(17, 356);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(104, 21);
             this.label11.TabIndex = 6;
@@ -487,7 +514,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(36, 322);
+            this.label8.Location = new System.Drawing.Point(19, 321);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 21);
             this.label8.TabIndex = 3;
@@ -500,6 +527,7 @@
             this.comboBox_windowstype.Name = "comboBox_windowstype";
             this.comboBox_windowstype.Size = new System.Drawing.Size(172, 29);
             this.comboBox_windowstype.TabIndex = 2;
+            this.comboBox_windowstype.SelectedIndexChanged += new System.EventHandler(this.comboBox_windowstype_SelectedIndexChanged);
             this.comboBox_windowstype.SelectionChangeCommitted += new System.EventHandler(this.comboBox_windowstype_SelectionChangeCommitted);
             // 
             // comboBox_hometype
@@ -513,14 +541,15 @@
             this.comboBox_hometype.SelectedIndexChanged += new System.EventHandler(this.comboBox_hometype_SelectedIndexChanged);
             this.comboBox_hometype.SelectionChangeCommitted += new System.EventHandler(this.comboBox_hometype_SelectionChangeCommitted);
             // 
-            // label7
+            // label_cost
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(518, 452);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 21);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Цена окна:";
+            this.label_cost.AutoSize = true;
+            this.label_cost.Font = new System.Drawing.Font("Century", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_cost.Location = new System.Drawing.Point(478, 451);
+            this.label_cost.Name = "label_cost";
+            this.label_cost.Size = new System.Drawing.Size(102, 21);
+            this.label_cost.TabIndex = 0;
+            this.label_cost.Text = "Цена окна:";
             // 
             // clientTableAdapter1
             // 
@@ -541,6 +570,68 @@
             // profileTypeTableAdapter1
             // 
             this.profileTypeTableAdapter1.ClearBeforeFill = true;
+            // 
+            // manufacturerTableAdapter1
+            // 
+            this.manufacturerTableAdapter1.ClearBeforeFill = true;
+            // 
+            // glazingTypeTableAdapter1
+            // 
+            this.glazingTypeTableAdapter1.ClearBeforeFill = true;
+            // 
+            // colorsTableAdapter1
+            // 
+            this.colorsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // windowSillTableAdapter1
+            // 
+            this.windowSillTableAdapter1.ClearBeforeFill = true;
+            // 
+            // mediumSashTableAdapter1
+            // 
+            this.mediumSashTableAdapter1.ClearBeforeFill = true;
+            // 
+            // leftSashTableAdapter1
+            // 
+            this.leftSashTableAdapter1.ClearBeforeFill = true;
+            // 
+            // rightSashTableAdapter1
+            // 
+            this.rightSashTableAdapter1.ClearBeforeFill = true;
+            // 
+            // label_height
+            // 
+            this.label_height.AutoSize = true;
+            this.label_height.Location = new System.Drawing.Point(230, 158);
+            this.label_height.Name = "label_height";
+            this.label_height.Size = new System.Drawing.Size(0, 21);
+            this.label_height.TabIndex = 26;
+            // 
+            // label_width
+            // 
+            this.label_width.AutoSize = true;
+            this.label_width.Location = new System.Drawing.Point(230, 121);
+            this.label_width.Name = "label_width";
+            this.label_width.Size = new System.Drawing.Size(0, 21);
+            this.label_width.TabIndex = 27;
+            // 
+            // label_widthtype
+            // 
+            this.label_widthtype.AutoSize = true;
+            this.label_widthtype.Font = new System.Drawing.Font("Candara Light", 11.76923F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_widthtype.Location = new System.Drawing.Point(230, 121);
+            this.label_widthtype.Name = "label_widthtype";
+            this.label_widthtype.Size = new System.Drawing.Size(0, 21);
+            this.label_widthtype.TabIndex = 28;
+            // 
+            // label_heighttype
+            // 
+            this.label_heighttype.AutoSize = true;
+            this.label_heighttype.Font = new System.Drawing.Font("Candara Light", 11.76923F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_heighttype.Location = new System.Drawing.Point(236, 162);
+            this.label_heighttype.Name = "label_heighttype";
+            this.label_heighttype.Size = new System.Drawing.Size(0, 21);
+            this.label_heighttype.TabIndex = 29;
             // 
             // MakeOrder
             // 
@@ -603,18 +694,29 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox_windowstype;
         private System.Windows.Forms.ComboBox comboBox_hometype;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Label label_cost;
+        private System.Windows.Forms.ComboBox comboBox_rigthsash;
+        private System.Windows.Forms.ComboBox comboBox_centrsash;
+        private System.Windows.Forms.ComboBox comboBox_leftsash;
+        private System.Windows.Forms.ComboBox comboBox_color;
+        private System.Windows.Forms.ComboBox comboBox_sill;
+        private System.Windows.Forms.ComboBox comboBox_glazingtype;
         private System.Windows.Forms.ComboBox comboBox_manufacturer;
         private System.Windows.Forms.ComboBox comboBox_profiletype;
         private StekloPacketDataSetTableAdapters.HomeTypeTableAdapter homeTypeTableAdapter1;
         private StekloPacketDataSetTableAdapters.WindowsTypeTableAdapter windowsTypeTableAdapter1;
         private StekloPacketDataSetTableAdapters.WindowsTableAdapter windowsTableAdapter1;
         private StekloPacketDataSetTableAdapters.ProfileTypeTableAdapter profileTypeTableAdapter1;
+        private StekloPacketDataSetTableAdapters.ManufacturerTableAdapter manufacturerTableAdapter1;
+        private StekloPacketDataSetTableAdapters.GlazingTypeTableAdapter glazingTypeTableAdapter1;
+        private StekloPacketDataSetTableAdapters.ColorsTableAdapter colorsTableAdapter1;
+        private StekloPacketDataSetTableAdapters.WindowSillTableAdapter windowSillTableAdapter1;
+        private StekloPacketDataSetTableAdapters.MediumSashTableAdapter mediumSashTableAdapter1;
+        private StekloPacketDataSetTableAdapters.LeftSashTableAdapter leftSashTableAdapter1;
+        private StekloPacketDataSetTableAdapters.RightSashTableAdapter rightSashTableAdapter1;
+        private System.Windows.Forms.Label label_width;
+        private System.Windows.Forms.Label label_height;
+        private System.Windows.Forms.Label label_heighttype;
+        private System.Windows.Forms.Label label_widthtype;
     }
 }

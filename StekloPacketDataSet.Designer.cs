@@ -66,6 +66,8 @@ namespace Steklo {
         
         private global::System.Data.DataRelation relationFK_Orders_Users;
         
+        private global::System.Data.DataRelation relationFK_ProfileType_Manufacturer;
+        
         private global::System.Data.DataRelation relationFK_Users_Role1;
         
         private global::System.Data.DataRelation relationFK_Windows_Category;
@@ -614,6 +616,7 @@ namespace Steklo {
             this.relationFK_OrderDetail_Windows = this.Relations["FK_OrderDetail_Windows"];
             this.relationFK_Orders_Client = this.Relations["FK_Orders_Client"];
             this.relationFK_Orders_Users = this.Relations["FK_Orders_Users"];
+            this.relationFK_ProfileType_Manufacturer = this.Relations["FK_ProfileType_Manufacturer"];
             this.relationFK_Users_Role1 = this.Relations["FK_Users_Role1"];
             this.relationFK_Windows_Category = this.Relations["FK_Windows_Category"];
             this.relationFK_Windows_Colors = this.Relations["FK_Windows_Colors"];
@@ -686,6 +689,10 @@ namespace Steklo {
                         this.tableUsers.IDUserColumn}, new global::System.Data.DataColumn[] {
                         this.tableOrders.IDUserColumn}, false);
             this.Relations.Add(this.relationFK_Orders_Users);
+            this.relationFK_ProfileType_Manufacturer = new global::System.Data.DataRelation("FK_ProfileType_Manufacturer", new global::System.Data.DataColumn[] {
+                        this.tableManufacturer.IDManufacturerColumn}, new global::System.Data.DataColumn[] {
+                        this.tableProfileType.IDManufacturerColumn}, false);
+            this.Relations.Add(this.relationFK_ProfileType_Manufacturer);
             this.relationFK_Users_Role1 = new global::System.Data.DataRelation("FK_Users_Role1", new global::System.Data.DataColumn[] {
                         this.tableRole.IDRoleColumn}, new global::System.Data.DataColumn[] {
                         this.tableUsers.IDRoleColumn}, false);
@@ -3934,6 +3941,8 @@ namespace Steklo {
             
             private global::System.Data.DataColumn columnTitle;
             
+            private global::System.Data.DataColumn columnIDManufacturer;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ProfileTypeDataTable() {
@@ -3985,6 +3994,14 @@ namespace Steklo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IDManufacturerColumn {
+                get {
+                    return this.columnIDManufacturer;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4020,11 +4037,15 @@ namespace Steklo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ProfileTypeRow AddProfileTypeRow(string Title) {
+            public ProfileTypeRow AddProfileTypeRow(string Title, ManufacturerRow parentManufacturerRowByFK_ProfileType_Manufacturer) {
                 ProfileTypeRow rowProfileTypeRow = ((ProfileTypeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Title};
+                        Title,
+                        null};
+                if ((parentManufacturerRowByFK_ProfileType_Manufacturer != null)) {
+                    columnValuesArray[2] = parentManufacturerRowByFK_ProfileType_Manufacturer[0];
+                }
                 rowProfileTypeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowProfileTypeRow);
                 return rowProfileTypeRow;
@@ -4056,6 +4077,7 @@ namespace Steklo {
             internal void InitVars() {
                 this.columnIDProfileType = base.Columns["IDProfileType"];
                 this.columnTitle = base.Columns["Title"];
+                this.columnIDManufacturer = base.Columns["IDManufacturer"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4065,6 +4087,8 @@ namespace Steklo {
                 base.Columns.Add(this.columnIDProfileType);
                 this.columnTitle = new global::System.Data.DataColumn("Title", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTitle);
+                this.columnIDManufacturer = new global::System.Data.DataColumn("IDManufacturer", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIDManufacturer);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIDProfileType}, true));
                 this.columnIDProfileType.AutoIncrement = true;
@@ -4075,6 +4099,7 @@ namespace Steklo {
                 this.columnIDProfileType.Unique = true;
                 this.columnTitle.AllowDBNull = false;
                 this.columnTitle.MaxLength = 50;
+                this.columnIDManufacturer.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6505,6 +6530,17 @@ namespace Steklo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ProfileTypeRow[] GetProfileTypeRows() {
+                if ((this.Table.ChildRelations["FK_ProfileType_Manufacturer"] == null)) {
+                    return new ProfileTypeRow[0];
+                }
+                else {
+                    return ((ProfileTypeRow[])(base.GetChildRows(this.Table.ChildRelations["FK_ProfileType_Manufacturer"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public WindowsRow[] GetWindowsRows() {
                 if ((this.Table.ChildRelations["FK_Windows_Manufacturer"] == null)) {
                     return new WindowsRow[0];
@@ -6892,6 +6928,28 @@ namespace Steklo {
                 }
                 set {
                     this[this.tableProfileType.TitleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int IDManufacturer {
+                get {
+                    return ((int)(this[this.tableProfileType.IDManufacturerColumn]));
+                }
+                set {
+                    this[this.tableProfileType.IDManufacturerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ManufacturerRow ManufacturerRow {
+                get {
+                    return ((ManufacturerRow)(this.GetParentRow(this.Table.ParentRelations["FK_ProfileType_Manufacturer"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_ProfileType_Manufacturer"]);
                 }
             }
             
@@ -11774,29 +11832,35 @@ SELECT IDOrder, IDClient, Cost, Sale, Montage, Demontage, OrderDate, OrderPerfor
             tableMapping.DataSetTable = "ProfileType";
             tableMapping.ColumnMappings.Add("IDProfileType", "IDProfileType");
             tableMapping.ColumnMappings.Add("Title", "Title");
+            tableMapping.ColumnMappings.Add("IDManufacturer", "IDManufacturer");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[ProfileType] WHERE (([IDProfileType] = @Original_IDProfileType" +
-                ") AND ([Title] = @Original_Title))";
+                ") AND ([Title] = @Original_Title) AND ([IDManufacturer] = @Original_IDManufactur" +
+                "er))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDProfileType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDProfileType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDManufacturer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDManufacturer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ProfileType] ([Title]) VALUES (@Title);\r\nSELECT IDProfileType," +
-                " Title FROM ProfileType WHERE (IDProfileType = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[ProfileType] ([Title], [IDManufacturer]) VALUES (@Title, @IDMa" +
+                "nufacturer);\r\nSELECT IDProfileType, Title, IDManufacturer FROM ProfileType WHERE" +
+                " (IDProfileType = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDManufacturer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDManufacturer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[ProfileType] SET [Title] = @Title WHERE (([IDProfileType] = @Origin" +
-                "al_IDProfileType) AND ([Title] = @Original_Title));\r\nSELECT IDProfileType, Title" +
-                " FROM ProfileType WHERE (IDProfileType = @IDProfileType)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ProfileType] SET [Title] = @Title, [IDManufacturer] = @IDManufacturer WHERE (([IDProfileType] = @Original_IDProfileType) AND ([Title] = @Original_Title) AND ([IDManufacturer] = @Original_IDManufacturer));
+SELECT IDProfileType, Title, IDManufacturer FROM ProfileType WHERE (IDProfileType = @IDProfileType)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDManufacturer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDManufacturer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDProfileType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDProfileType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDManufacturer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDManufacturer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDProfileType", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDProfileType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -11810,11 +11874,17 @@ SELECT IDOrder, IDClient, Cost, Sale, Montage, Demontage, OrderDate, OrderPerfor
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IDProfileType, Title FROM dbo.ProfileType";
+            this._commandCollection[0].CommandText = "SELECT IDProfileType, Title, IDManufacturer FROM dbo.ProfileType";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT   IDManufacturer\r\nFROM      ProfileType\r\nWHERE   (IDProfileType = @profile" +
+                "type)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@profiletype", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDProfileType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11874,7 +11944,7 @@ SELECT IDOrder, IDClient, Cost, Sale, Montage, Demontage, OrderDate, OrderPerfor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IDProfileType, string Original_Title) {
+        public virtual int Delete(int Original_IDProfileType, string Original_Title, int Original_IDManufacturer) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IDProfileType));
             if ((Original_Title == null)) {
                 throw new global::System.ArgumentNullException("Original_Title");
@@ -11882,6 +11952,7 @@ SELECT IDOrder, IDClient, Cost, Sale, Montage, Demontage, OrderDate, OrderPerfor
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Title));
             }
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_IDManufacturer));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11902,13 +11973,14 @@ SELECT IDOrder, IDClient, Cost, Sale, Montage, Demontage, OrderDate, OrderPerfor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Title) {
+        public virtual int Insert(string Title, int IDManufacturer) {
             if ((Title == null)) {
                 throw new global::System.ArgumentNullException("Title");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Title));
             }
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(IDManufacturer));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11929,21 +12001,23 @@ SELECT IDOrder, IDClient, Cost, Sale, Montage, Demontage, OrderDate, OrderPerfor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Title, int Original_IDProfileType, string Original_Title, int IDProfileType) {
+        public virtual int Update(string Title, int IDManufacturer, int Original_IDProfileType, string Original_Title, int Original_IDManufacturer, int IDProfileType) {
             if ((Title == null)) {
                 throw new global::System.ArgumentNullException("Title");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Title));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_IDProfileType));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(IDManufacturer));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_IDProfileType));
             if ((Original_Title == null)) {
                 throw new global::System.ArgumentNullException("Original_Title");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Title));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Title));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(IDProfileType));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_IDManufacturer));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(IDProfileType));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11964,8 +12038,37 @@ SELECT IDOrder, IDClient, Cost, Sale, Montage, Demontage, OrderDate, OrderPerfor
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Title, int Original_IDProfileType, string Original_Title) {
-            return this.Update(Title, Original_IDProfileType, Original_Title, Original_IDProfileType);
+        public virtual int Update(string Title, int IDManufacturer, int Original_IDProfileType, string Original_Title, int Original_IDManufacturer) {
+            return this.Update(Title, IDManufacturer, Original_IDProfileType, Original_Title, Original_IDManufacturer, Original_IDProfileType);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> SelectManufacturer(int profiletype) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((int)(profiletype));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
         }
     }
     
@@ -13189,7 +13292,7 @@ SELECT IDWindow, Cost, IDColor, IDManufacturer, Width, Height, IDCategory, IDWin
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT IDWindow, Cost, IDColor, IDManufacturer, Width, Height, IDCategory, IDWind" +
@@ -13206,10 +13309,28 @@ SELECT IDWindow, Cost, IDColor, IDManufacturer, Width, Height, IDCategory, IDWin
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT   Width\r\nFROM      Windows\r\nWHERE   (IDHomeType = @idhometype) AND (IDWind" +
-                "owType = @idwindowtype)";
+                "owType = @idwindowtype)\r\n";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idhometype", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDHomeType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idwindowtype", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDWindowType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = @"SELECT   Cost
+FROM      Windows
+WHERE   (IDColor = @idcolor) AND (Width = @width) AND (Height = @height) AND (IDWindowType = @idwindowtype) AND (IDWindowSill = @idsill) AND (IDProfileType = @idprofiletype) AND (IDHomeType = @idhometype) AND 
+                (IDGlazingType = @idglazingtype) AND (IDLeftSash = @idleftsash) AND (IDRigthSash = @idrightsash) AND (IDMediumSash = @idmediumsash)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idcolor", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDColor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@width", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Width", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@height", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Height", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idwindowtype", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDWindowType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idsill", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDWindowSill", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idprofiletype", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDProfileType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idhometype", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDHomeType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idglazingtype", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDGlazingType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idleftsash", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDLeftSash", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idrightsash", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDRigthSash", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idmediumsash", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDMediumSash", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13458,7 +13579,7 @@ SELECT IDWindow, Cost, IDColor, IDManufacturer, Width, Height, IDCategory, IDWin
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual object SelectHeight(int idhometype, int idwindowtype) {
+        public virtual global::System.Nullable<int> SelectHeight(int idhometype, int idwindowtype) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             command.Parameters[0].Value = ((int)(idhometype));
             command.Parameters[1].Value = ((int)(idwindowtype));
@@ -13478,17 +13599,17 @@ SELECT IDWindow, Cost, IDColor, IDManufacturer, Width, Height, IDCategory, IDWin
             }
             if (((returnValue == null) 
                         || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return null;
+                return new global::System.Nullable<int>();
             }
             else {
-                return ((object)(returnValue));
+                return new global::System.Nullable<int>(((int)(returnValue)));
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual object SelectWidth(int idhometype, int idwindowtype) {
+        public virtual global::System.Nullable<int> SelectWidth(int idhometype, int idwindowtype) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             command.Parameters[0].Value = ((int)(idhometype));
             command.Parameters[1].Value = ((int)(idwindowtype));
@@ -13508,10 +13629,49 @@ SELECT IDWindow, Cost, IDColor, IDManufacturer, Width, Height, IDCategory, IDWin
             }
             if (((returnValue == null) 
                         || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return null;
+                return new global::System.Nullable<int>();
             }
             else {
-                return ((object)(returnValue));
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<decimal> SelectWindowCost(int idcolor, int width, int height, int idwindowtype, int idsill, int idprofiletype, int idhometype, int idglazingtype, int idleftsash, int idrightsash, int idmediumsash) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            command.Parameters[0].Value = ((int)(idcolor));
+            command.Parameters[1].Value = ((int)(width));
+            command.Parameters[2].Value = ((int)(height));
+            command.Parameters[3].Value = ((int)(idwindowtype));
+            command.Parameters[4].Value = ((int)(idsill));
+            command.Parameters[5].Value = ((int)(idprofiletype));
+            command.Parameters[6].Value = ((int)(idhometype));
+            command.Parameters[7].Value = ((int)(idglazingtype));
+            command.Parameters[8].Value = ((int)(idleftsash));
+            command.Parameters[9].Value = ((int)(idrightsash));
+            command.Parameters[10].Value = ((int)(idmediumsash));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<decimal>();
+            }
+            else {
+                return new global::System.Nullable<decimal>(((decimal)(returnValue)));
             }
         }
     }
@@ -14622,6 +14782,15 @@ SELECT IDWindow, Cost, IDColor, IDManufacturer, Width, Height, IDCategory, IDWin
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._manufacturerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Manufacturer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._manufacturerTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._categoryTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Category.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -14664,15 +14833,6 @@ SELECT IDWindow, Cost, IDColor, IDManufacturer, Width, Height, IDCategory, IDWin
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._windowSillTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._mediumSashTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.MediumSash.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._mediumSashTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -14730,12 +14890,12 @@ SELECT IDWindow, Cost, IDColor, IDManufacturer, Width, Height, IDCategory, IDWin
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._manufacturerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Manufacturer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._mediumSashTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.MediumSash.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._manufacturerTableAdapter.Update(updatedRows));
+                    result = (result + this._mediumSashTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -14784,6 +14944,14 @@ SELECT IDWindow, Cost, IDColor, IDManufacturer, Width, Height, IDCategory, IDWin
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._manufacturerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Manufacturer.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._manufacturerTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._categoryTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Category.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -14821,14 +14989,6 @@ SELECT IDWindow, Cost, IDColor, IDManufacturer, Width, Height, IDCategory, IDWin
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._windowSillTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._mediumSashTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.MediumSash.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._mediumSashTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -14880,11 +15040,11 @@ SELECT IDWindow, Cost, IDColor, IDManufacturer, Width, Height, IDCategory, IDWin
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._manufacturerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Manufacturer.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._mediumSashTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.MediumSash.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._manufacturerTableAdapter.Update(addedRows));
+                    result = (result + this._mediumSashTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -14946,11 +15106,11 @@ SELECT IDWindow, Cost, IDColor, IDManufacturer, Width, Height, IDCategory, IDWin
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._manufacturerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Manufacturer.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._mediumSashTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.MediumSash.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._manufacturerTableAdapter.Update(deletedRows));
+                    result = (result + this._mediumSashTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -15002,14 +15162,6 @@ SELECT IDWindow, Cost, IDColor, IDManufacturer, Width, Height, IDCategory, IDWin
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._mediumSashTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.MediumSash.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._mediumSashTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._windowSillTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.WindowSill.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -15047,6 +15199,14 @@ SELECT IDWindow, Cost, IDColor, IDManufacturer, Width, Height, IDCategory, IDWin
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._categoryTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._manufacturerTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Manufacturer.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._manufacturerTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
