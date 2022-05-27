@@ -47,6 +47,10 @@
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_surname = new System.Windows.Forms.TextBox();
             this.groupBox_window = new System.Windows.Forms.GroupBox();
+            this.label_heighttype = new System.Windows.Forms.Label();
+            this.label_widthtype = new System.Windows.Forms.Label();
+            this.label_width = new System.Windows.Forms.Label();
+            this.label_height = new System.Windows.Forms.Label();
             this.comboBox_rigthsash = new System.Windows.Forms.ComboBox();
             this.comboBox_centrsash = new System.Windows.Forms.ComboBox();
             this.comboBox_leftsash = new System.Windows.Forms.ComboBox();
@@ -85,10 +89,7 @@
             this.mediumSashTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.MediumSashTableAdapter();
             this.leftSashTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.LeftSashTableAdapter();
             this.rightSashTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.RightSashTableAdapter();
-            this.label_height = new System.Windows.Forms.Label();
-            this.label_width = new System.Windows.Forms.Label();
-            this.label_widthtype = new System.Windows.Forms.Label();
-            this.label_heighttype = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_client.SuspendLayout();
@@ -307,6 +308,40 @@
             this.groupBox_window.TabStop = false;
             this.groupBox_window.Text = "Добавление окна";
             // 
+            // label_heighttype
+            // 
+            this.label_heighttype.AutoSize = true;
+            this.label_heighttype.Font = new System.Drawing.Font("Candara Light", 11.76923F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_heighttype.Location = new System.Drawing.Point(236, 162);
+            this.label_heighttype.Name = "label_heighttype";
+            this.label_heighttype.Size = new System.Drawing.Size(0, 21);
+            this.label_heighttype.TabIndex = 29;
+            // 
+            // label_widthtype
+            // 
+            this.label_widthtype.AutoSize = true;
+            this.label_widthtype.Font = new System.Drawing.Font("Candara Light", 11.76923F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_widthtype.Location = new System.Drawing.Point(230, 121);
+            this.label_widthtype.Name = "label_widthtype";
+            this.label_widthtype.Size = new System.Drawing.Size(0, 21);
+            this.label_widthtype.TabIndex = 28;
+            // 
+            // label_width
+            // 
+            this.label_width.AutoSize = true;
+            this.label_width.Location = new System.Drawing.Point(230, 121);
+            this.label_width.Name = "label_width";
+            this.label_width.Size = new System.Drawing.Size(0, 21);
+            this.label_width.TabIndex = 27;
+            // 
+            // label_height
+            // 
+            this.label_height.AutoSize = true;
+            this.label_height.Location = new System.Drawing.Point(230, 158);
+            this.label_height.Name = "label_height";
+            this.label_height.Size = new System.Drawing.Size(0, 21);
+            this.label_height.TabIndex = 26;
+            // 
             // comboBox_rigthsash
             // 
             this.comboBox_rigthsash.FormattingEnabled = true;
@@ -451,7 +486,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(18, 388);
+            this.label15.Location = new System.Drawing.Point(27, 391);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(115, 21);
             this.label15.TabIndex = 10;
@@ -545,7 +580,7 @@
             // 
             this.label_cost.AutoSize = true;
             this.label_cost.Font = new System.Drawing.Font("Century", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_cost.Location = new System.Drawing.Point(478, 451);
+            this.label_cost.Location = new System.Drawing.Point(437, 455);
             this.label_cost.Name = "label_cost";
             this.label_cost.Size = new System.Drawing.Size(102, 21);
             this.label_cost.TabIndex = 0;
@@ -599,45 +634,22 @@
             // 
             this.rightSashTableAdapter1.ClearBeforeFill = true;
             // 
-            // label_height
+            // groupBox1
             // 
-            this.label_height.AutoSize = true;
-            this.label_height.Location = new System.Drawing.Point(230, 158);
-            this.label_height.Name = "label_height";
-            this.label_height.Size = new System.Drawing.Size(0, 21);
-            this.label_height.TabIndex = 26;
-            // 
-            // label_width
-            // 
-            this.label_width.AutoSize = true;
-            this.label_width.Location = new System.Drawing.Point(230, 121);
-            this.label_width.Name = "label_width";
-            this.label_width.Size = new System.Drawing.Size(0, 21);
-            this.label_width.TabIndex = 27;
-            // 
-            // label_widthtype
-            // 
-            this.label_widthtype.AutoSize = true;
-            this.label_widthtype.Font = new System.Drawing.Font("Candara Light", 11.76923F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_widthtype.Location = new System.Drawing.Point(230, 121);
-            this.label_widthtype.Name = "label_widthtype";
-            this.label_widthtype.Size = new System.Drawing.Size(0, 21);
-            this.label_widthtype.TabIndex = 28;
-            // 
-            // label_heighttype
-            // 
-            this.label_heighttype.AutoSize = true;
-            this.label_heighttype.Font = new System.Drawing.Font("Candara Light", 11.76923F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_heighttype.Location = new System.Drawing.Point(236, 162);
-            this.label_heighttype.Name = "label_heighttype";
-            this.label_heighttype.Size = new System.Drawing.Size(0, 21);
-            this.label_heighttype.TabIndex = 29;
+            this.groupBox1.Font = new System.Drawing.Font("Candara Light", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Location = new System.Drawing.Point(1002, 135);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(295, 478);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Корзина";
             // 
             // MakeOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 683);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox_window);
             this.Controls.Add(this.groupBox_client);
             this.Controls.Add(this.panel2);
@@ -718,5 +730,6 @@
         private System.Windows.Forms.Label label_height;
         private System.Windows.Forms.Label label_heighttype;
         private System.Windows.Forms.Label label_widthtype;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
