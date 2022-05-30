@@ -32,8 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_close = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.button_make_order = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -77,14 +77,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Coral;
-            this.panel2.Location = new System.Drawing.Point(-1, 424);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(469, 100);
-            this.panel2.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -94,6 +86,14 @@
             this.label1.Size = new System.Drawing.Size(204, 29);
             this.label1.TabIndex = 4;
             this.label1.Text = "Меню Менеджера";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Coral;
+            this.panel2.Location = new System.Drawing.Point(-1, 424);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(469, 100);
+            this.panel2.TabIndex = 2;
             // 
             // button_make_order
             // 
@@ -132,7 +132,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(236, 48);
             this.button2.TabIndex = 7;
-            this.button2.Text = "Отчетность";
+            this.button2.Text = "Проектирование окон";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // ManagerMenu

@@ -16,5 +16,19 @@ namespace Steklo
         {
             InitializeComponent();
         }
+
+        private void button_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button_manageradd_Click(object sender, EventArgs e)
+        {
+            ManagerAdd managerAdd = new ManagerAdd();
+            this.Hide();
+            managerAdd.StartPosition = FormStartPosition.CenterScreen;
+            managerAdd.ShowDialog();
+            this.Show();
+        }
     }
 }

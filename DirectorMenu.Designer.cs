@@ -32,10 +32,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_exit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button_enter = new System.Windows.Forms.Button();
+            this.button_redakt = new System.Windows.Forms.Button();
+            this.button_otchetManager = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button_otchetSum = new System.Windows.Forms.Button();
+            this.button_manageradd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +65,7 @@
             this.button_exit.TabIndex = 1;
             this.button_exit.Text = "Назад";
             this.button_exit.UseVisualStyleBackColor = false;
+            this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
             // 
             // pictureBox1
             // 
@@ -74,31 +77,31 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // button_redakt
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(112, 246);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 48);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Изменение цен/товаров";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button_redakt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_redakt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_redakt.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_redakt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_redakt.Location = new System.Drawing.Point(112, 246);
+            this.button_redakt.Name = "button_redakt";
+            this.button_redakt.Size = new System.Drawing.Size(236, 48);
+            this.button_redakt.TabIndex = 10;
+            this.button_redakt.Text = "Изменение цен/товаров";
+            this.button_redakt.UseVisualStyleBackColor = false;
             // 
-            // button_enter
+            // button_otchetManager
             // 
-            this.button_enter.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_enter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_enter.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_enter.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_enter.Location = new System.Drawing.Point(112, 183);
-            this.button_enter.Name = "button_enter";
-            this.button_enter.Size = new System.Drawing.Size(236, 48);
-            this.button_enter.TabIndex = 9;
-            this.button_enter.Text = "Отчетность";
-            this.button_enter.UseVisualStyleBackColor = false;
+            this.button_otchetManager.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_otchetManager.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_otchetManager.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_otchetManager.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_otchetManager.Location = new System.Drawing.Point(112, 183);
+            this.button_otchetManager.Name = "button_otchetManager";
+            this.button_otchetManager.Size = new System.Drawing.Size(236, 48);
+            this.button_otchetManager.TabIndex = 9;
+            this.button_otchetManager.Text = "Отчетность по менеджерам";
+            this.button_otchetManager.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -113,19 +116,48 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Coral;
-            this.panel2.Location = new System.Drawing.Point(1, 328);
+            this.panel2.Location = new System.Drawing.Point(1, 457);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(469, 100);
+            this.panel2.Size = new System.Drawing.Size(474, 65);
             this.panel2.TabIndex = 12;
+            // 
+            // button_otchetSum
+            // 
+            this.button_otchetSum.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_otchetSum.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_otchetSum.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_otchetSum.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_otchetSum.Location = new System.Drawing.Point(112, 309);
+            this.button_otchetSum.Name = "button_otchetSum";
+            this.button_otchetSum.Size = new System.Drawing.Size(236, 48);
+            this.button_otchetSum.TabIndex = 13;
+            this.button_otchetSum.Text = "Отчетность по доходам";
+            this.button_otchetSum.UseVisualStyleBackColor = false;
+            // 
+            // button_manageradd
+            // 
+            this.button_manageradd.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_manageradd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_manageradd.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_manageradd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_manageradd.Location = new System.Drawing.Point(112, 376);
+            this.button_manageradd.Name = "button_manageradd";
+            this.button_manageradd.Size = new System.Drawing.Size(236, 48);
+            this.button_manageradd.TabIndex = 14;
+            this.button_manageradd.Text = "Добавление менеджера";
+            this.button_manageradd.UseVisualStyleBackColor = false;
+            this.button_manageradd.Click += new System.EventHandler(this.button_manageradd_Click);
             // 
             // DirectorMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 426);
+            this.ClientSize = new System.Drawing.Size(473, 523);
+            this.Controls.Add(this.button_manageradd);
+            this.Controls.Add(this.button_otchetSum);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button_enter);
+            this.Controls.Add(this.button_redakt);
+            this.Controls.Add(this.button_otchetManager);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "DirectorMenu";
@@ -142,9 +174,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button_exit;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button_enter;
+        private System.Windows.Forms.Button button_redakt;
+        private System.Windows.Forms.Button button_otchetManager;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button_otchetSum;
+        private System.Windows.Forms.Button button_manageradd;
     }
 }

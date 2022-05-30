@@ -20,8 +20,11 @@ namespace Steklo
         {
             InitializeComponent();
             dataUsers = this.usersTableAdapter1.GetData();
-            textBox_login.Text = "manager1@mail.ru";
-            textBox_pass.Text = "manager1";
+            //textBox_login.Text = "manager1@mail.ru";
+            //textBox_pass.Text = "manager1";
+            textBox_login.Text = "director@gmail.com";
+            textBox_pass.Text = "director";
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void button_enter_Click(object sender, EventArgs e)
@@ -72,6 +75,7 @@ namespace Steklo
                         MessageBox.Show("Вы успешно авторизовались как менеджер.");
                         ManagerMenu managerMenu = new ManagerMenu();
                         this.Hide();
+                        managerMenu.StartPosition = FormStartPosition.CenterScreen;
                         managerMenu.ShowDialog();
                         this.Show();
                         break;
@@ -79,6 +83,7 @@ namespace Steklo
                         MessageBox.Show("Вы успешно авторизовались как директор.");
                         DirectorMenu directorMenu = new DirectorMenu();
                         this.Hide();
+                        directorMenu.StartPosition = FormStartPosition.CenterScreen;
                         directorMenu.ShowDialog();
                         this.Show();
                         break;                 

@@ -11,5 +11,11 @@ namespace Steklo
         static public int idUser;
         static public int idRole;
         static public string login;
+        static public int idClient;
+        static public decimal TotalCost;
+        static public bool Demontage;
+        static public bool Montage;
+        static public decimal sale;
+        static public int idOrder;
     }
 }

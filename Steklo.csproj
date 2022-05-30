@@ -52,6 +52,12 @@
     <Compile Include="AddHomeType.Designer.cs">
       <DependentUpon>AddHomeType.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChooseWindowCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseWindowCount.Designer.cs">
+      <DependentUpon>ChooseWindowCount.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClassTotal.cs" />
     <Compile Include="DirectorMenu.cs">
       <SubType>Form</SubType>
@@ -70,6 +76,12 @@
     </Compile>
     <Compile Include="MakeOrder.Designer.cs">
       <DependentUpon>MakeOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerAdd.Designer.cs">
+      <DependentUpon>ManagerAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerMenu.cs">
       <SubType>Form</SubType>
@@ -90,6 +102,9 @@
     <EmbeddedResource Include="AddHomeType.resx">
       <DependentUpon>AddHomeType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChooseWindowCount.resx">
+      <DependentUpon>ChooseWindowCount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DirectorMenu.resx">
       <DependentUpon>DirectorMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MakeOrder.resx">
       <DependentUpon>MakeOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerAdd.resx">
+      <DependentUpon>ManagerAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerMenu.resx">
       <DependentUpon>ManagerMenu.cs</DependentUpon>
@@ -110,6 +128,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -134,6 +153,123 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\dv_glx_glx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\dv_glx_pov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\dv_glx_povotkd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\dv_pov_pov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\dv_pov_povotkd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\dv_povotkd_glx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\dv_povotkd_pov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\dv_povotkd_povotkd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\dv_pox_glx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\glx_glx_glx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\glx_glx_otkd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\glx_glx_pov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\glx_otkd_otkd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\glx_pov_otkd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\glx_pov_pov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\odn_glx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\odn_pov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\odn_pov_otkd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\otkd_glx_otkd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\otkd_glx_pov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\otkd_otkd_glx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\otkd_otkd_otkd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\pov_glx_otkd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\pov_glx_pov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\pov_pov_glx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\pov_pov_pov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\otkd_otkd_pov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\otkd_pov_glx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\otkd_pov_pov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\pov_otkd_pov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\pov_pov_otkd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\pov_otkd_otkd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\glx_otkd_glx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\glx_otkd_pov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\glx_pov_glx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\otkd_glx_glx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\otkd_pov_otkd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\pov_glx_glx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\pov_otkd_glx.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

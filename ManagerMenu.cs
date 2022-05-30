@@ -26,6 +26,7 @@ namespace Steklo
         {
             MakeOrder makeOrder = new MakeOrder();
             this.Hide();
+            makeOrder.StartPosition = FormStartPosition.CenterScreen;
             makeOrder.ShowDialog();
             this.Show();
         }
