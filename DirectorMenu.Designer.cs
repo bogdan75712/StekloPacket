@@ -89,6 +89,7 @@
             this.button_redakt.TabIndex = 10;
             this.button_redakt.Text = "Изменение цен/товаров";
             this.button_redakt.UseVisualStyleBackColor = false;
+            this.button_redakt.Click += new System.EventHandler(this.button_redakt_Click);
             // 
             // button_otchetManager
             // 
@@ -102,6 +103,7 @@
             this.button_otchetManager.TabIndex = 9;
             this.button_otchetManager.Text = "Отчетность по менеджерам";
             this.button_otchetManager.UseVisualStyleBackColor = false;
+            this.button_otchetManager.Click += new System.EventHandler(this.button_otchetManager_Click);
             // 
             // label1
             // 
@@ -133,6 +135,7 @@
             this.button_otchetSum.TabIndex = 13;
             this.button_otchetSum.Text = "Отчетность по доходам";
             this.button_otchetSum.UseVisualStyleBackColor = false;
+            this.button_otchetSum.Click += new System.EventHandler(this.button_otchetSum_Click);
             // 
             // button_manageradd
             // 
@@ -152,6 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(473, 523);
             this.Controls.Add(this.button_manageradd);
             this.Controls.Add(this.button_otchetSum);

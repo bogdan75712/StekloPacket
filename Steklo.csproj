@@ -32,9 +32,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,13 +56,19 @@
     <Compile Include="AddHomeType.Designer.cs">
       <DependentUpon>AddHomeType.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChooseWindowCount.cs">
+    <Compile Include="ChangeCostandTovars.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChooseWindowCount.Designer.cs">
-      <DependentUpon>ChooseWindowCount.cs</DependentUpon>
+    <Compile Include="ChangeCostandTovars.Designer.cs">
+      <DependentUpon>ChangeCostandTovars.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassTotal.cs" />
+    <Compile Include="CompanyCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanyCheck.Designer.cs">
+      <DependentUpon>CompanyCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="DirectorMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +80,12 @@
     </Compile>
     <Compile Include="Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrders.Designer.cs">
+      <DependentUpon>FormOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="MakeOrder.cs">
       <SubType>Form</SubType>
@@ -89,6 +105,12 @@
     <Compile Include="ManagerMenu.Designer.cs">
       <DependentUpon>ManagerMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagersCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagersCheck.Designer.cs">
+      <DependentUpon>ManagersCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StekloPacketDataSet.cs">
@@ -102,14 +124,20 @@
     <EmbeddedResource Include="AddHomeType.resx">
       <DependentUpon>AddHomeType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChooseWindowCount.resx">
-      <DependentUpon>ChooseWindowCount.cs</DependentUpon>
+    <EmbeddedResource Include="ChangeCostandTovars.resx">
+      <DependentUpon>ChangeCostandTovars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompanyCheck.resx">
+      <DependentUpon>CompanyCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DirectorMenu.resx">
       <DependentUpon>DirectorMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOrders.resx">
+      <DependentUpon>FormOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MakeOrder.resx">
       <DependentUpon>MakeOrder.cs</DependentUpon>
@@ -119,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerMenu.resx">
       <DependentUpon>ManagerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagersCheck.resx">
+      <DependentUpon>ManagersCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -270,6 +301,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\pov_otkd_glx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

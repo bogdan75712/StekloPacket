@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button_make_order = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_toOrders = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -109,18 +109,19 @@
             this.button_make_order.UseVisualStyleBackColor = false;
             this.button_make_order.Click += new System.EventHandler(this.button_make_order_Click);
             // 
-            // button1
+            // button_toOrders
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(113, 234);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 48);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Статус заказа";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button_toOrders.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_toOrders.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_toOrders.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_toOrders.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_toOrders.Location = new System.Drawing.Point(113, 234);
+            this.button_toOrders.Name = "button_toOrders";
+            this.button_toOrders.Size = new System.Drawing.Size(236, 48);
+            this.button_toOrders.TabIndex = 6;
+            this.button_toOrders.Text = "Статус заказа";
+            this.button_toOrders.UseVisualStyleBackColor = false;
+            this.button_toOrders.Click += new System.EventHandler(this.button_toOrders_Click);
             // 
             // button2
             // 
@@ -139,9 +140,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(468, 520);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_toOrders);
             this.Controls.Add(this.button_make_order);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -162,7 +164,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_make_order;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_toOrders;
         private System.Windows.Forms.Button button2;
     }
 }

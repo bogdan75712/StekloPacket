@@ -30,5 +30,14 @@ namespace Steklo
             makeOrder.ShowDialog();
             this.Show();
         }
+
+        private void button_toOrders_Click(object sender, EventArgs e)
+        {
+            FormOrders formOrders = new FormOrders();
+            this.Hide();
+            formOrders.StartPosition = FormStartPosition.CenterScreen;
+            formOrders.ShowDialog();
+            this.Show();
+        }
     }
 }

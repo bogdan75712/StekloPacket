@@ -454,6 +454,11 @@ namespace Steklo
             checkBox1.Enabled = false;
         }
 
+        private void comboBox_profiletype_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void button_oform_order_Click(object sender, EventArgs e)
         {
             if (clientadded == true)
@@ -497,6 +502,22 @@ namespace Steklo
                 {
                     ordersTableAdapter1.InsertOrder(IDOrder, ClassTotal.idClient, ClassTotal.TotalCost, ClassTotal.sale, ClassTotal.Montage, ClassTotal.Demontage, dateOrder.ToString(), datePerform.ToString(), ClassTotal.idUser);
                     MessageBox.Show("Заказа добавлен в базу");
+                    this.flowLayoutPanel1.Controls.Clear();
+                    IdWindow.Clear();
+                    CountWindow.Clear();
+                    //cost = 0;
+                    //WindowCost();
+
+                    totalcost = 0;
+                    label_totalcost.Text = "Цена заказа: ";
+                    checkBox1.Enabled = true;
+
+                    textBox_address.Text = "";
+                    textBox_name.Text = "";
+                    textBox_patron.Text = "";
+                    textBox_surname.Text = "";
+                    maskedTextBox_phone.Text = "";
+
                 }
                 catch (Exception ex)
                 {

@@ -13,5 +13,8 @@ C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.DirectorMenu
 C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.ManagerMenu.resources
 C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.MakeOrder.resources
 C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.AddHomeType.resources
-C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.ChooseWindowCount.resources
 C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.ManagerAdd.resources
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.FormOrders.resources
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.ManagersCheck.resources
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.CompanyCheck.resources
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.ChangeCostandTovars.resources

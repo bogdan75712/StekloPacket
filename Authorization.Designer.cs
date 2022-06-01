@@ -55,9 +55,9 @@
             this.panel1.Controls.Add(this.button_exit);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Location = new System.Drawing.Point(-6, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(469, 118);
+            this.panel1.Size = new System.Drawing.Size(486, 118);
             this.panel1.TabIndex = 0;
             // 
             // button_exit
@@ -97,9 +97,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Coral;
-            this.panel2.Location = new System.Drawing.Point(1, 471);
+            this.panel2.Location = new System.Drawing.Point(-6, 471);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(469, 100);
+            this.panel2.Size = new System.Drawing.Size(486, 100);
             this.panel2.TabIndex = 1;
             // 
             // button_enter
@@ -180,6 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(470, 566);
             this.Controls.Add(this.pictureBox_pass);
             this.Controls.Add(this.textBox_pass);

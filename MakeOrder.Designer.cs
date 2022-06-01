@@ -35,6 +35,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox_client = new System.Windows.Forms.GroupBox();
+            this.comboBox_client = new System.Windows.Forms.ComboBox();
+            this.button_chooseclient = new System.Windows.Forms.Button();
+            this.maskedTextBox_phone = new System.Windows.Forms.MaskedTextBox();
             this.button_add_to_base = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,6 +49,9 @@
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_surname = new System.Windows.Forms.TextBox();
             this.groupBox_window = new System.Windows.Forms.GroupBox();
+            this.pictureBox_trx = new System.Windows.Forms.PictureBox();
+            this.pictureBox_dvyx = new System.Windows.Forms.PictureBox();
+            this.pictureBox_odn = new System.Windows.Forms.PictureBox();
             this.checkBox_montage = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -94,9 +100,6 @@
             this.button_delAllinmarket = new System.Windows.Forms.Button();
             this.label_totalcost = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.maskedTextBox_phone = new System.Windows.Forms.MaskedTextBox();
-            this.button_chooseclient = new System.Windows.Forms.Button();
-            this.comboBox_client = new System.Windows.Forms.ComboBox();
             this.clientTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.ClientTableAdapter();
             this.homeTypeTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.HomeTypeTableAdapter();
             this.windowsTypeTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.WindowsTypeTableAdapter();
@@ -112,19 +115,16 @@
             this.windowTypeGlazingandProfile1 = new Steklo.StekloPacketDataSetTableAdapters.WindowTypeGlazingandProfile();
             this.ordersTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.OrdersTableAdapter();
             this.orderDetailTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.OrderDetailTableAdapter();
-            this.pictureBox_odn = new System.Windows.Forms.PictureBox();
-            this.pictureBox_dvyx = new System.Windows.Forms.PictureBox();
-            this.pictureBox_trx = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_client.SuspendLayout();
             this.groupBox_window.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_trx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_dvyx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_odn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_sale)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_odn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_dvyx)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_trx)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -203,6 +203,37 @@
             this.groupBox_client.TabIndex = 4;
             this.groupBox_client.TabStop = false;
             this.groupBox_client.Text = "Данные клиента";
+            // 
+            // comboBox_client
+            // 
+            this.comboBox_client.FormattingEnabled = true;
+            this.comboBox_client.Location = new System.Drawing.Point(13, 75);
+            this.comboBox_client.Name = "comboBox_client";
+            this.comboBox_client.Size = new System.Drawing.Size(265, 29);
+            this.comboBox_client.TabIndex = 36;
+            this.comboBox_client.SelectionChangeCommitted += new System.EventHandler(this.comboBox_client_SelectionChangeCommitted);
+            // 
+            // button_chooseclient
+            // 
+            this.button_chooseclient.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_chooseclient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_chooseclient.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_chooseclient.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_chooseclient.Location = new System.Drawing.Point(13, 27);
+            this.button_chooseclient.Name = "button_chooseclient";
+            this.button_chooseclient.Size = new System.Drawing.Size(265, 42);
+            this.button_chooseclient.TabIndex = 35;
+            this.button_chooseclient.Text = "Выбрать клиента из базы";
+            this.button_chooseclient.UseVisualStyleBackColor = false;
+            this.button_chooseclient.Click += new System.EventHandler(this.button_chooseclient_Click);
+            // 
+            // maskedTextBox_phone
+            // 
+            this.maskedTextBox_phone.Location = new System.Drawing.Point(89, 266);
+            this.maskedTextBox_phone.Mask = "+99990000000";
+            this.maskedTextBox_phone.Name = "maskedTextBox_phone";
+            this.maskedTextBox_phone.Size = new System.Drawing.Size(189, 28);
+            this.maskedTextBox_phone.TabIndex = 10;
             // 
             // button_add_to_base
             // 
@@ -341,6 +372,31 @@
             this.groupBox_window.TabStop = false;
             this.groupBox_window.Text = "Добавление окна";
             this.groupBox_window.Enter += new System.EventHandler(this.groupBox_window_Enter);
+            // 
+            // pictureBox_trx
+            // 
+            this.pictureBox_trx.Location = new System.Drawing.Point(333, 174);
+            this.pictureBox_trx.Name = "pictureBox_trx";
+            this.pictureBox_trx.Size = new System.Drawing.Size(343, 208);
+            this.pictureBox_trx.TabIndex = 37;
+            this.pictureBox_trx.TabStop = false;
+            // 
+            // pictureBox_dvyx
+            // 
+            this.pictureBox_dvyx.Location = new System.Drawing.Point(410, 174);
+            this.pictureBox_dvyx.Name = "pictureBox_dvyx";
+            this.pictureBox_dvyx.Size = new System.Drawing.Size(265, 208);
+            this.pictureBox_dvyx.TabIndex = 36;
+            this.pictureBox_dvyx.TabStop = false;
+            this.pictureBox_dvyx.Click += new System.EventHandler(this.pictureBox_dvyx_Click);
+            // 
+            // pictureBox_odn
+            // 
+            this.pictureBox_odn.Location = new System.Drawing.Point(493, 174);
+            this.pictureBox_odn.Name = "pictureBox_odn";
+            this.pictureBox_odn.Size = new System.Drawing.Size(183, 208);
+            this.pictureBox_odn.TabIndex = 35;
+            this.pictureBox_odn.TabStop = false;
             // 
             // checkBox_montage
             // 
@@ -502,6 +558,7 @@
             this.comboBox_profiletype.Name = "comboBox_profiletype";
             this.comboBox_profiletype.Size = new System.Drawing.Size(121, 29);
             this.comboBox_profiletype.TabIndex = 18;
+            this.comboBox_profiletype.SelectedIndexChanged += new System.EventHandler(this.comboBox_profiletype_SelectedIndexChanged);
             this.comboBox_profiletype.SelectionChangeCommitted += new System.EventHandler(this.comboBox_profiletype_SelectionChangeCommitted);
             // 
             // textBox_height
@@ -816,37 +873,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(344, 374);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // maskedTextBox_phone
-            // 
-            this.maskedTextBox_phone.Location = new System.Drawing.Point(89, 266);
-            this.maskedTextBox_phone.Mask = "+99990000000";
-            this.maskedTextBox_phone.Name = "maskedTextBox_phone";
-            this.maskedTextBox_phone.Size = new System.Drawing.Size(189, 28);
-            this.maskedTextBox_phone.TabIndex = 10;
-            // 
-            // button_chooseclient
-            // 
-            this.button_chooseclient.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_chooseclient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_chooseclient.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_chooseclient.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_chooseclient.Location = new System.Drawing.Point(13, 27);
-            this.button_chooseclient.Name = "button_chooseclient";
-            this.button_chooseclient.Size = new System.Drawing.Size(265, 42);
-            this.button_chooseclient.TabIndex = 35;
-            this.button_chooseclient.Text = "Выбрать клиента из базы";
-            this.button_chooseclient.UseVisualStyleBackColor = false;
-            this.button_chooseclient.Click += new System.EventHandler(this.button_chooseclient_Click);
-            // 
-            // comboBox_client
-            // 
-            this.comboBox_client.FormattingEnabled = true;
-            this.comboBox_client.Location = new System.Drawing.Point(13, 75);
-            this.comboBox_client.Name = "comboBox_client";
-            this.comboBox_client.Size = new System.Drawing.Size(265, 29);
-            this.comboBox_client.TabIndex = 36;
-            this.comboBox_client.SelectionChangeCommitted += new System.EventHandler(this.comboBox_client_SelectionChangeCommitted);
-            // 
             // clientTableAdapter1
             // 
             this.clientTableAdapter1.ClearBeforeFill = true;
@@ -907,35 +933,11 @@
             // 
             this.orderDetailTableAdapter1.ClearBeforeFill = true;
             // 
-            // pictureBox_odn
-            // 
-            this.pictureBox_odn.Location = new System.Drawing.Point(493, 174);
-            this.pictureBox_odn.Name = "pictureBox_odn";
-            this.pictureBox_odn.Size = new System.Drawing.Size(183, 208);
-            this.pictureBox_odn.TabIndex = 35;
-            this.pictureBox_odn.TabStop = false;
-            // 
-            // pictureBox_dvyx
-            // 
-            this.pictureBox_dvyx.Location = new System.Drawing.Point(410, 174);
-            this.pictureBox_dvyx.Name = "pictureBox_dvyx";
-            this.pictureBox_dvyx.Size = new System.Drawing.Size(265, 208);
-            this.pictureBox_dvyx.TabIndex = 36;
-            this.pictureBox_dvyx.TabStop = false;
-            this.pictureBox_dvyx.Click += new System.EventHandler(this.pictureBox_dvyx_Click);
-            // 
-            // pictureBox_trx
-            // 
-            this.pictureBox_trx.Location = new System.Drawing.Point(333, 174);
-            this.pictureBox_trx.Name = "pictureBox_trx";
-            this.pictureBox_trx.Size = new System.Drawing.Size(343, 208);
-            this.pictureBox_trx.TabIndex = 37;
-            this.pictureBox_trx.TabStop = false;
-            // 
             // MakeOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1354, 797);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox_window);
@@ -952,13 +954,13 @@
             this.groupBox_client.PerformLayout();
             this.groupBox_window.ResumeLayout(false);
             this.groupBox_window.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_trx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_dvyx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_odn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_sale)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_odn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_dvyx)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_trx)).EndInit();
             this.ResumeLayout(false);
 
         }

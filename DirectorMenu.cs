@@ -30,5 +30,32 @@ namespace Steklo
             managerAdd.ShowDialog();
             this.Show();
         }
+
+        private void button_otchetManager_Click(object sender, EventArgs e)
+        {
+            ManagersCheck managersCheck = new ManagersCheck();
+            this.Hide();
+            managersCheck.StartPosition = FormStartPosition.CenterScreen;
+            managersCheck.ShowDialog();
+            this.Show();
+        }
+
+        private void button_otchetSum_Click(object sender, EventArgs e)
+        {
+            CompanyCheck companyCheck = new CompanyCheck();
+            this.Hide();
+            companyCheck.StartPosition = FormStartPosition.CenterScreen;
+            companyCheck.ShowDialog();
+            this.Show();
+        }
+
+        private void button_redakt_Click(object sender, EventArgs e)
+        {
+            ChangeCostandTovars changeCostand = new ChangeCostandTovars();
+            this.Hide();
+            changeCostand.StartPosition = FormStartPosition.CenterScreen;
+            changeCostand.ShowDialog();
+            this.Show();
+        }
     }
 }
