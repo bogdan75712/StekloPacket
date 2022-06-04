@@ -63,6 +63,16 @@ namespace Steklo.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arc {
+            get {
+                object obj = ResourceManager.GetObject("arc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dv_glx_glx {
             get {
                 object obj = ResourceManager.GetObject("dv_glx_glx", resourceCulture);
@@ -153,6 +163,26 @@ namespace Steklo.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap eight1 {
+            get {
+                object obj = ResourceManager.GetObject("eight1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap elipse {
+            get {
+                object obj = ResourceManager.GetObject("elipse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap glx_glx_glx {
             get {
                 object obj = ResourceManager.GetObject("glx_glx_glx", resourceCulture);
@@ -236,6 +266,16 @@ namespace Steklo.Properties {
         internal static System.Drawing.Bitmap glx_pov_pov {
             get {
                 object obj = ResourceManager.GetObject("glx_pov_pov", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap halfelipse {
+            get {
+                object obj = ResourceManager.GetObject("halfelipse", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,6 +403,26 @@ namespace Steklo.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap png_line_hor {
+            get {
+                object obj = ResourceManager.GetObject("png_line_hor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_line_vert {
+            get {
+                object obj = ResourceManager.GetObject("png_line_vert", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pov_glx_glx {
             get {
                 object obj = ResourceManager.GetObject("pov_glx_glx", resourceCulture);
@@ -456,6 +516,56 @@ namespace Steklo.Properties {
         internal static System.Drawing.Bitmap pov_pov_pov {
             get {
                 object obj = ResourceManager.GetObject("pov_pov_pov", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sash {
+            get {
+                object obj = ResourceManager.GetObject("sash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trapezy1 {
+            get {
+                object obj = ResourceManager.GetObject("trapezy1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trapezypryam1 {
+            get {
+                object obj = ResourceManager.GetObject("trapezypryam1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap treugpryam1 {
+            get {
+                object obj = ResourceManager.GetObject("treugpryam1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap treugravn {
+            get {
+                object obj = ResourceManager.GetObject("treugravn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -155,6 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(513, 450);
             this.Controls.Add(this.button_addhome);
             this.Controls.Add(this.textBox_hometype);
@@ -163,6 +164,7 @@
             this.Controls.Add(this.textBox_name_hometype);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddHomeType";
             this.Text = "Добавление типа дома";
             this.panel1.ResumeLayout(false);

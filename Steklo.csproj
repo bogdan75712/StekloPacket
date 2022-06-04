@@ -113,6 +113,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="StekloPacketDataSet.cs">
       <DependentUpon>StekloPacketDataSet.xsd</DependentUpon>
     </Compile>
@@ -120,6 +125,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StekloPacketDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WindowProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowProject.Designer.cs">
+      <DependentUpon>WindowProject.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddHomeType.resx">
       <DependentUpon>AddHomeType.cs</DependentUpon>
@@ -153,14 +164,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="WindowProject.resx">
+      <DependentUpon>WindowProject.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -303,6 +312,25 @@
     <None Include="Assets\pov_otkd_glx.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\eight.jpg" />
+    <None Include="Assets\krug.jpg" />
+    <None Include="Assets\png-line_hor.png" />
+    <None Include="Assets\png-line_vert.png" />
+    <None Include="Assets\polukrug.jpg" />
+    <None Include="Assets\recokr.jpg" />
+    <None Include="Assets\recprym.jpg" />
+    <None Include="Assets\recugol.jpg" />
+    <None Include="Assets\sash.png" />
+    <None Include="Assets\treugprym.jpg" />
+    <None Include="Assets\treugravn.jpg" />
+    <None Include="Assets\arc.png" />
+    <None Include="Assets\eight.png" />
+    <None Include="Assets\elipse.png" />
+    <None Include="Assets\halfelipse.png" />
+    <None Include="Assets\trapezy.png" />
+    <None Include="Assets\trapezypryam.png" />
+    <None Include="Assets\treugpryam.png" />
+    <None Include="Assets\treugravn.png" />
     <Content Include="logo_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

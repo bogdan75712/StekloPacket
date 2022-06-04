@@ -164,6 +164,7 @@
             this.Controls.Add(this.button_otchetManager);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DirectorMenu";
             this.Text = "Меню директора";
             this.panel1.ResumeLayout(false);

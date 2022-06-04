@@ -20,10 +20,10 @@ namespace Steklo
         {
             InitializeComponent();
             dataUsers = this.usersTableAdapter1.GetData();
-            //textBox_login.Text = "manager1@mail.ru";
-            //textBox_pass.Text = "manager1";
-            textBox_login.Text = "director@gmail.com";
-            textBox_pass.Text = "director";
+            textBox_login.Text = "manager1@mail.ru";
+            textBox_pass.Text = "manager1";
+            //textBox_login.Text = "director@gmail.com";
+            //textBox_pass.Text = "director";
             StartPosition = FormStartPosition.CenterScreen;
         }
 

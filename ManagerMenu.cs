@@ -39,5 +39,14 @@ namespace Steklo
             formOrders.ShowDialog();
             this.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            WindowProject win = new WindowProject();
+            this.Hide();
+            win.StartPosition = FormStartPosition.CenterScreen;
+            win.ShowDialog();
+            this.Show();
+        }
     }
 }

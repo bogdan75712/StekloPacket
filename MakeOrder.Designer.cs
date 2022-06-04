@@ -944,6 +944,7 @@
             this.Controls.Add(this.groupBox_client);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MakeOrder";
             this.Text = "Оформление заказа";
             this.Load += new System.EventHandler(this.MakeOrder_Load);

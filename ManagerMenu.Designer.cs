@@ -135,6 +135,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Проектирование окон";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ManagerMenu
             // 
@@ -147,6 +148,7 @@
             this.Controls.Add(this.button_make_order);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManagerMenu";
             this.Text = "Меню менеджера";
             this.panel1.ResumeLayout(false);
