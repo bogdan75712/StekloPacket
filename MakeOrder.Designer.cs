@@ -371,7 +371,6 @@
             this.groupBox_window.TabIndex = 5;
             this.groupBox_window.TabStop = false;
             this.groupBox_window.Text = "Добавление окна";
-            this.groupBox_window.Enter += new System.EventHandler(this.groupBox_window_Enter);
             // 
             // pictureBox_trx
             // 
@@ -388,7 +387,6 @@
             this.pictureBox_dvyx.Size = new System.Drawing.Size(265, 208);
             this.pictureBox_dvyx.TabIndex = 36;
             this.pictureBox_dvyx.TabStop = false;
-            this.pictureBox_dvyx.Click += new System.EventHandler(this.pictureBox_dvyx_Click);
             // 
             // pictureBox_odn
             // 
@@ -503,7 +501,6 @@
             this.comboBox_centrsash.Name = "comboBox_centrsash";
             this.comboBox_centrsash.Size = new System.Drawing.Size(196, 29);
             this.comboBox_centrsash.TabIndex = 24;
-            this.comboBox_centrsash.SelectedIndexChanged += new System.EventHandler(this.comboBox_centrsash_SelectedIndexChanged);
             this.comboBox_centrsash.SelectionChangeCommitted += new System.EventHandler(this.comboBox_centrsash_SelectionChangeCommitted);
             // 
             // comboBox_leftsash
@@ -540,7 +537,6 @@
             this.comboBox_glazingtype.Name = "comboBox_glazingtype";
             this.comboBox_glazingtype.Size = new System.Drawing.Size(149, 29);
             this.comboBox_glazingtype.TabIndex = 20;
-            this.comboBox_glazingtype.SelectedIndexChanged += new System.EventHandler(this.comboBox_glazingtype_SelectedIndexChanged);
             this.comboBox_glazingtype.SelectionChangeCommitted += new System.EventHandler(this.comboBox_glazingtype_SelectionChangeCommitted);
             // 
             // comboBox_manufacturer
@@ -719,7 +715,6 @@
             this.comboBox_hometype.Size = new System.Drawing.Size(138, 29);
             this.comboBox_hometype.TabIndex = 1;
             this.comboBox_hometype.DropDown += new System.EventHandler(this.comboBox_hometype_DropDown);
-            this.comboBox_hometype.SelectedIndexChanged += new System.EventHandler(this.comboBox_hometype_SelectedIndexChanged);
             this.comboBox_hometype.SelectionChangeCommitted += new System.EventHandler(this.comboBox_hometype_SelectionChangeCommitted);
             // 
             // label_cost
@@ -825,7 +820,6 @@
             this.checkBox_demontage.TabIndex = 35;
             this.checkBox_demontage.Text = "Демонтаж";
             this.checkBox_demontage.UseVisualStyleBackColor = true;
-            this.checkBox_demontage.CheckedChanged += new System.EventHandler(this.checkBox_demontage_CheckedChanged);
             this.checkBox_demontage.CheckStateChanged += new System.EventHandler(this.checkBox_demontage_CheckStateChanged);
             // 
             // button_oform_order

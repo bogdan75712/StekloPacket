@@ -126,6 +126,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StekloPacketDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ViewCustomWindows.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCustomWindows.Designer.cs">
+      <DependentUpon>ViewCustomWindows.cs</DependentUpon>
+    </Compile>
     <Compile Include="WindowProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCustomWindows.resx">
+      <DependentUpon>ViewCustomWindows.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WindowProject.resx">
       <DependentUpon>WindowProject.cs</DependentUpon>

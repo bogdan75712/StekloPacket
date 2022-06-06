@@ -28,7 +28,7 @@ namespace Steklo
             dataOrders = this.ordersUsersClientTableAdapter1.GetData(ClassTotal.idUser);
             dataGridView1.DataSource = dataOrders.CopyToDataTable();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.AllowUserToAddRows = false; 	//Нет дополнительных строк
+            dataGridView1.AllowUserToAddRows = false; 	
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.Columns[0].HeaderText = "Номер заказа";

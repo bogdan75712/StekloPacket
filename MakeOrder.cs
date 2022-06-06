@@ -20,8 +20,7 @@ namespace Steklo
         Panel panel;
         Label label_windowtype, label_size, label_profiletype, label_glazingtype, label_costwindow, label_count_window;
         Button deleteFrommarket;
-        //DateTime dateOrder = new DateTime();
-        //DateTime datePerform = new DateTime();
+        
         string dateOrder;
         string datePerform;
         int IDwindow;
@@ -48,9 +47,9 @@ namespace Steklo
             
             comboBox_client.Enabled = false;
             comboBox_client.Visible = false;
-            this.flowLayoutPanel1.FlowDirection = FlowDirection.TopDown; //свеху
-            this.flowLayoutPanel1.AutoScroll = true;  //Полосы прокрутки
-            this.flowLayoutPanel1.WrapContents = false;//Нет перехода на новую строку
+            this.flowLayoutPanel1.FlowDirection = FlowDirection.TopDown; 
+            this.flowLayoutPanel1.AutoScroll = true;  
+            this.flowLayoutPanel1.WrapContents = false;
             this.flowLayoutPanel1.Font = new Font(FontFamily.GenericMonospace, 12);
             this.flowLayoutPanel1.Controls.Clear();
             checkBox_demontage.Checked = true;
@@ -67,10 +66,7 @@ namespace Steklo
             comboBox_windowstype.DisplayMember = "Title";
             comboBox_windowstype.ValueMember = "IDWindowType";
             idwindowtype = (int)comboBox_windowstype.SelectedValue; 
-            //ShowHeightAndWidth();
             
-            //textBox_height.Text = "500";
-            //ыtextBox_width.Text = "500";
 
             comboBox_profiletype.DataSource = profileTypeTableAdapter1.GetData();
             comboBox_profiletype.DisplayMember = "Title";
@@ -123,7 +119,7 @@ namespace Steklo
 
 
             label_cost.Text = "Цена окна: " + cost;
-            //WindowCost();
+            
         }
 
         public void WindowCost()
@@ -139,14 +135,7 @@ namespace Steklo
             idprofiletype = (int)comboBox_profiletype.SelectedValue;
             idmanufacturer = (int)comboBox_manufacturer.SelectedValue;
 
-            //cost = Convert.ToDecimal(windowsTableAdapter1.SelectWindowCost(idcolor,width,height,idwindowtype,idsill,idprofiletype,idhometype,idglazingtype,idleftsash,idrightsash,idmediumsash));
-            //if (cost != 0)
-            //{
-            //    label_cost.Text = "Цена окна: " + Math.Round(cost, 2).ToString();
-            //}
-            //else 
-            //{
-                //width = textBox_width.Text;
+            
                 squarewidth = Convert.ToDecimal(width) / 1000;
                 squareheight = Convert.ToDecimal(height) / 1000;
                 summsquare = squareheight * squarewidth;
@@ -302,9 +291,7 @@ namespace Steklo
                     cost += 2500;
                     break;
                 }
-                label_cost.Text = "Цена окна: " + Math.Round(cost, 2).ToString();
-
-            //}
+                label_cost.Text = "Цена окна: " + Math.Round(cost, 2).ToString();           
             
         }
 
@@ -328,11 +315,7 @@ namespace Steklo
             addHomeType.ShowDialog();
             this.Show();
         }
-
-        private void comboBox_glazingtype_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //WindowCost();
-        }
+       
 
         private void comboBox_glazingtype_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -355,11 +338,7 @@ namespace Steklo
             WindowCost();
             WindowShow();
         }
-
-        private void comboBox_centrsash_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void comboBox_centrsash_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -371,12 +350,7 @@ namespace Steklo
         {
             WindowCost();
         }
-
-        private void checkBox_demontage_CheckedChanged(object sender, EventArgs e)
-        {
-                       
-            
-        }
+        
 
         private void checkBox_demontage_CheckStateChanged(object sender, EventArgs e)
         {
@@ -403,12 +377,8 @@ namespace Steklo
 
         private void numericUpDown_sale_ValueChanged(object sender, EventArgs e)
         {
-            
-            sumsale = numericUpDown_sale.Value;
-                             
-            //sumsale = totalcost * numericUpDown_sale.Value / 100;
-            //totalcost = totalcost - sumsale;
-            //label_totalcost.Text = "Цена заказа: " + Math.Round(totalcost,2);
+           
+            sumsale = numericUpDown_sale.Value;                                        
         }
 
         private void button_chooseclient_Click(object sender, EventArgs e)
@@ -421,27 +391,20 @@ namespace Steklo
         private void comboBox_client_SelectionChangeCommitted(object sender, EventArgs e)
         {
             idClient = (int)comboBox_client.SelectedValue;
+            ClassTotal.idClient = idClient;
+            clientadded = true;
             DataTable dt = new DataTable();
             dt = clientTableAdapter1.GetDataByClient(idClient);
             maskedTextBox_phone.Text = dt.Rows[0][2].ToString();
             textBox_address.Text = dt.Rows[0][3].ToString();
             string fio = dt.Rows[0][1].ToString();
             string[] words = fio.Split(' ');
-            //MessageBox.Show(fio);
+            
             textBox_surname.Text = words[0];
             textBox_name.Text = words[1];
             textBox_patron.Text = words[2];
         }
-
-        private void groupBox_window_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox_dvyx_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -480,7 +443,7 @@ namespace Steklo
                 {
                     ClassTotal.Montage = true;
                 }
-                //ClassTotal.Demontage = demontage;
+                
 
                 dateOrder = dateTimePicker_order.Value.ToShortDateString();
                 datePerform = dateTimePicker_perform.Value.ToShortDateString();
@@ -505,8 +468,7 @@ namespace Steklo
                     this.flowLayoutPanel1.Controls.Clear();
                     IdWindow.Clear();
                     CountWindow.Clear();
-                    //cost = 0;
-                    //WindowCost();
+                    
 
                     totalcost = 0;
                     label_totalcost.Text = "Цена заказа: ";
@@ -547,8 +509,7 @@ namespace Steklo
             this.flowLayoutPanel1.Controls.Clear();
             IdWindow.Clear();
             CountWindow.Clear();
-            //cost = 0;
-            //WindowCost();
+           
 
             totalcost = 0;
             label_totalcost.Text = "Цена заказа: ";
@@ -561,7 +522,7 @@ namespace Steklo
             DataTable dt = windowsTableAdapter1.GetDataByWindow(idcolor,width,height,idwindowtype,idsill,idprofiletype,idhometype,idglazingtype,idleftsash,idrightsash,idmediumsash);
             if (dt.Rows.Count == 0)
             {
-                //MessageBox.Show("такого окна нет");
+                
                 if (width != 0 && height != 0 && width >= 500 && width <= 2800 && height >= 500 && height <= 2000)
                 {
                     costadded = cost;
@@ -657,18 +618,7 @@ namespace Steklo
 
                     IdWindow.Add(IDwindow);
                     CountWindow.Add(count);
-                    //deleteFrommarket = new Button();
-                    //deleteFrommarket.Location = new Point(50, 100);
-                    //deleteFrommarket.Size = new Size(150, 30);
-                    //deleteFrommarket.AutoSize = false;
-                    //deleteFrommarket.Text = "Удалить товар";
-                    //deleteFrommarket.FlatStyle = FlatStyle.Flat;
-                    //deleteFrommarket.Tag = panelid;
-                    //deleteFrommarket.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular);
-                    //deleteFrommarket.Click += new EventHandler(this.DeleteFromMarket);
-                    //panel.Controls.Add(deleteFrommarket);
-                    //panel.Tag = panelid;
-                    //panelid++;
+                    
 
                     this.flowLayoutPanel1.Controls.Add(panel);
                     cost = 0;
@@ -692,11 +642,7 @@ namespace Steklo
         
         
 
-        private void comboBox_hometype_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
+       
         private void comboBox_hometype_SelectionChangeCommitted(object sender, EventArgs e)
         {
             idhometype = (int)comboBox_hometype.SelectedValue;
@@ -1036,9 +982,7 @@ namespace Steklo
                 textBox_height.Text = str_height;
                 label_heighttype.Text = "это типовой размер";
             }
-            //textBox_width.Text = windowsTableAdapter1.SelectWidth(idhometype, idwindowtype).ToString();
             
-            //textBox_height.Text = windowsTableAdapter1.SelectHeight(idhometype, idwindowtype).ToString();
             
         }
 
@@ -1073,7 +1017,7 @@ namespace Steklo
         public MakeOrder()
         {
             InitializeComponent();
-            //textBox_phone.MaxLength = 12;
+            
         }
 
         

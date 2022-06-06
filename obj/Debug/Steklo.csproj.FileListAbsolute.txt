@@ -19,3 +19,4 @@ C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.ManagersChec
 C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.CompanyCheck.resources
 C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.ChangeCostandTovars.resources
 C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.WindowProject.resources
+C:\Users\GADDY\Desktop\Диплом\Project\Steklo\obj\Debug\Steklo.ViewCustomWindows.resources

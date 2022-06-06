@@ -33,9 +33,10 @@ namespace Steklo
                     try
                     {
                         usersTableAdapter1.InsertManager(idmanager, login, pass, 2);
-                        MessageBox.Show("Менеджер добавлен в систему");
                         dataUsers = this.usersTableAdapter1.GetData();
                         dataGridView1.DataSource = dataUsers.Where(x => x.IDRole > 1).CopyToDataTable();
+                        MessageBox.Show("Менеджер добавлен в систему");
+                        
                     }
                     catch (Exception ex)
                     { 
@@ -61,7 +62,7 @@ namespace Steklo
             dataUsers = this.usersTableAdapter1.GetData();
             dataGridView1.DataSource = dataUsers.Where(x => x.IDRole > 1).CopyToDataTable();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AllowUserToAddRows = false; 	//Нет дополнительных строк
+            dataGridView1.AllowUserToAddRows = false; 	
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.Columns[0].HeaderText = "ID";

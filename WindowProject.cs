@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,9 +51,7 @@ namespace Steklo
             picadd = false;
             try
             {
-                //pb = new PictureBox();
-                //pb.Width = 250;
-                //pb.Height = 250;
+                
                 pictureBox3.Controls.Clear();
                 sashCount = 0;
                 vertikLineCount = 0;
@@ -65,23 +64,7 @@ namespace Steklo
                 pictureBox3.SendToBack();
                 pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
                 pictureBox2.BackgroundImage = Properties.Resources.elipse;
-                //pb.Left = 114; //this.Width - groupBox1.Width - panel1.Width/2;
-                //pb.Top = 173; //panel1.Top + panel1.Height/2;
-                //pictureBox3.Image = Properties.Resources.elipse;
-
-                //pb.BackColor = Color.Transparent;
-
-                //this.panel3.Controls.Add(pb);
-
-
-
-                //pb.MouseClick += Pb_Click;
-                //pb.MouseDoubleClick += Pb_doubleClick;
-                //pb.MouseMove += Pb_MouseMove;
-                //pb.MouseDown += Pb_MouseDown;
-                //pb.MouseUp += Pb_MouseUp;
-                //pb.KeyDown += Pb_key;
-                //pb.MouseWheel += scrol;
+                
                 picadd = true;
             }
             catch
@@ -96,7 +79,7 @@ namespace Steklo
             {
 
                 PictureBox pb = sender as PictureBox;
-                //pb.Image == Properties.Resources.sash
+                
                 if ( pb.Width == 20 && sashCount != 0)
                 {
                     cost -= 1500;
@@ -118,7 +101,7 @@ namespace Steklo
                 }
                 this.pictureBox3.Controls.Remove(pb);
                 
-                //picadd = false;
+                
 
             }
 
@@ -127,43 +110,22 @@ namespace Steklo
 
         private void Pb_MouseMove(object sender, MouseEventArgs e)
         {
-            //связь с перетаскиваемым компонентом
-            PictureBox pb = (PictureBox)sender; // Можно sender as PictureBox
-            if (drag) //Разрешено перетаскивание
+            
+            PictureBox pb = (PictureBox)sender; 
+            if (drag) 
             {
 
-                pb.Left += (e.X - x0); //Изменение положения компонента
-                pb.Top += (e.Y - y0);
-
-                //if (pb.Bounds.Left < pictureBox3.Left)
-                //{
-                //    pb.Left = 0;
-                //    return;
-                //}
-                //if (pb.Bounds.Right > pictureBox3.Width)
-                //{
-                //    pb.Left = pictureBox3.Width - pb.Width;
-                //    return;
-                //}
-                //if (pb.Bounds.Top < pictureBox3.Top)
-                //{
-                //    pb.Top = 0;
-                //    return;
-                //}
-                //if (pb.Bounds.Bottom > pictureBox3.Bottom)
-                //{
-                //    pb.Top = pictureBox3.Height - pb.Height;
-                //    return;
-                //}
+                pb.Left += (e.X - x0); 
+                pb.Top += (e.Y - y0);               
             }
         }
 
         private void Pb_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) //Проверка на левую кнопку мыши
+            if (e.Button == MouseButtons.Left) 
             {
-                drag = true; //Разрешить перетаскивание
-                x0 = e.X; //Зафиксировать позицию начала перетаскивания
+                drag = true; 
+                x0 = e.X; 
                 y0 = e.Y;
                 last_pos = e.Location;
             }
@@ -171,26 +133,15 @@ namespace Steklo
 
         private void Pb_MouseUp(object sender, MouseEventArgs e)
         {
-            drag = false; //Запретить перетаскивание
+            drag = false; 
         }
 
         private void button_halfelipse_Click(object sender, EventArgs e)
         {
-            //panel3.Controls.Clear();
+            
             picadd = false;
             try
-            {
-                
-                //pb = new PictureBox();
-                //pb.Width = 250;
-                //pb.Height = 250;
-                //pb.BackgroundImage = Properties.Resources.halfelipse;
-                //pb.Left = 114; 
-                //pb.Top = 173; 
-                //pb.BackgroundImageLayout = ImageLayout.Zoom;
-                //pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-                //pictureBox2.BackgroundImage = Properties.Resources.halfelipse;
-                //this.panel3.Controls.Add(pb);
+            {                                
                 pictureBox3.Controls.Clear();
                 sashCount = 0;               
                 vertikLineCount = 0;
@@ -203,14 +154,7 @@ namespace Steklo
                 pictureBox3.SendToBack();
                 pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
                 pictureBox2.BackgroundImage = Properties.Resources.halfelipse;
-
-                //pb.MouseClick += Pb_Click;
-                //pb.MouseDoubleClick += Pb_doubleClick;
-                //pb.MouseMove += Pb_MouseMove;
-                //pb.MouseDown += Pb_MouseDown;
-                //pb.MouseUp += Pb_MouseUp;
-                //pb.KeyDown += Pb_key;
-                //pb.MouseWheel += scrol;
+                
                 picadd = true;
             }
             catch
@@ -220,22 +164,10 @@ namespace Steklo
         }
 
         private void button_eight_Click(object sender, EventArgs e)
-        {
-            //panel3.Controls.Clear();
+        {           
             picadd = false;
             try
             {
-                //pb = new PictureBox();
-                //pb.Width = 250;
-                //pb.Height = 250;
-                //pb.BackgroundImage = Properties.Resources.eight1;
-                //pb.Left = 114; //this.Width - groupBox1.Width - panel1.Width/2;
-                //pb.Top = 173; //panel1.Top + panel1.Height/2;
-                //pb.BackgroundImageLayout = ImageLayout.Zoom;
-                //pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-                //pictureBox2.BackgroundImage = Properties.Resources.eight1;
-                //this.panel3.Controls.Add(pb);
-
                 pictureBox3.Controls.Clear();
                 sashCount = 0;
                 vertikLineCount = 0;
@@ -248,14 +180,7 @@ namespace Steklo
                 pictureBox3.SendToBack();
                 pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
                 pictureBox2.BackgroundImage = Properties.Resources.eight1;
-
-                //pb.MouseClick += Pb_Click;
-                //pb.MouseDoubleClick += Pb_doubleClick;
-                //pb.MouseMove += Pb_MouseMove;
-                //pb.MouseDown += Pb_MouseDown;
-                //pb.MouseUp += Pb_MouseUp;
-                //pb.KeyDown += Pb_key;
-                //pb.MouseWheel += scrol;
+               
                 picadd = true;
             }
             catch
@@ -266,21 +191,11 @@ namespace Steklo
 
         private void button_triangleravn_Click(object sender, EventArgs e)
         {
-            //panel3.Controls.Clear();
+            
             picadd = false;
             try
             {
-                //pb = new PictureBox();
-                //pb.Width = 250;
-                //pb.Height = 250;
-                //pb.BackgroundImage = Properties.Resources.treugravn;
-                //pb.Left = 114; //this.Width - groupBox1.Width - panel1.Width/2;
-                //pb.Top = 173; //panel1.Top + panel1.Height/2;
-                //pb.BackgroundImageLayout = ImageLayout.Zoom;
-                //pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-                //pictureBox2.BackgroundImage = Properties.Resources.treugravn;
-                //this.panel3.Controls.Add(pb);
-
+                
                 pictureBox3.Controls.Clear();
                 sashCount = 0;
                 vertikLineCount = 0;
@@ -293,14 +208,7 @@ namespace Steklo
                 pictureBox3.SendToBack();
                 pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
                 pictureBox2.BackgroundImage = Properties.Resources.treugravn;
-
-                //pb.MouseClick += Pb_Click;
-                //pb.MouseDoubleClick += Pb_doubleClick;
-                //pb.MouseMove += Pb_MouseMove;
-                //pb.MouseDown += Pb_MouseDown;
-                //pb.MouseUp += Pb_MouseUp;
-                //pb.KeyDown += Pb_key;
-                //pb.MouseWheel += scrol;
+                
                 picadd = true;
             }
             catch
@@ -311,20 +219,10 @@ namespace Steklo
 
         private void button_trianglepryam_Click(object sender, EventArgs e)
         {
-            //panel3.Controls.Clear();
+            
             picadd = false;
             try
-            {
-                //pb = new PictureBox();
-                //pb.Width = 250;
-                //pb.Height = 250;
-                //pb.BackgroundImage = Properties.Resources.treugpryam1;
-                //pb.Left = 114; //this.Width - groupBox1.Width - panel1.Width/2;
-                //pb.Top = 173; //panel1.Top + panel1.Height/2;
-                //pb.BackgroundImageLayout = ImageLayout.Zoom;
-                //pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-                //pictureBox2.BackgroundImage = Properties.Resources.treugpryam1;
-                //this.panel3.Controls.Add(pb);
+            {                
 
                 pictureBox3.Controls.Clear();
                 sashCount = 0;
@@ -338,14 +236,7 @@ namespace Steklo
                 pictureBox3.SendToBack();
                 pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
                 pictureBox2.BackgroundImage = Properties.Resources.treugpryam1;
-
-                //pb.MouseClick += Pb_Click;
-                //pb.MouseDoubleClick += Pb_doubleClick;
-                //pb.MouseMove += Pb_MouseMove;
-                //pb.MouseDown += Pb_MouseDown;
-                //pb.MouseUp += Pb_MouseUp;
-                //pb.KeyDown += Pb_key;
-                //pb.MouseWheel += scrol;
+                
                 picadd = true;
             }
             catch
@@ -356,21 +247,11 @@ namespace Steklo
 
         private void button_arc_Click(object sender, EventArgs e)
         {
-            //panel3.Controls.Clear();
+            
             picadd = false;
             try
             {
-                //pb = new PictureBox();
-                //pb.Width = 250;
-                //pb.Height = 250;
-                //pb.BackgroundImage = Properties.Resources.arc;
-                //pb.Left = 114; //this.Width - groupBox1.Width - panel1.Width/2;
-                //pb.Top = 173; //panel1.Top + panel1.Height/2;
-                //pb.BackgroundImageLayout = ImageLayout.Zoom;
-                //pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-                //pictureBox2.BackgroundImage = Properties.Resources.arc;
-                //this.panel3.Controls.Add(pb);
-
+                
                 pictureBox3.Controls.Clear();
                 sashCount = 0;
                 vertikLineCount = 0;
@@ -383,14 +264,7 @@ namespace Steklo
                 pictureBox3.SendToBack();
                 pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
                 pictureBox2.BackgroundImage = Properties.Resources.arc;
-
-                //pb.MouseClick += Pb_Click;
-                //pb.MouseDoubleClick += Pb_doubleClick;
-                //pb.MouseMove += Pb_MouseMove;
-                //pb.MouseDown += Pb_MouseDown;
-                //pb.MouseUp += Pb_MouseUp;
-                //pb.KeyDown += Pb_key;
-                //pb.MouseWheel += scrol;
+                
                 picadd = true;
             }
             catch
@@ -401,21 +275,11 @@ namespace Steklo
 
         private void button_trapezoidarc_Click(object sender, EventArgs e)
         {
-            //panel3.Controls.Clear();
+            
             picadd = false;
             try
             {
-                //pb = new PictureBox();
-                //pb.Width = 250;
-                //pb.Height = 250;
-                //pb.BackgroundImage = Properties.Resources.trapezy1;
-                //pb.Left = 114; //this.Width - groupBox1.Width - panel1.Width/2;
-                //pb.Top = 173; //panel1.Top + panel1.Height/2;
-                //pb.BackgroundImageLayout = ImageLayout.Zoom;
-                //pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-                //pictureBox2.BackgroundImage = Properties.Resources.trapezy1;
-                //this.panel3.Controls.Add(pb);
-
+                
                 pictureBox3.Controls.Clear();
                 sashCount = 0;
                 vertikLineCount = 0;
@@ -428,14 +292,7 @@ namespace Steklo
                 pictureBox3.SendToBack();
                 pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
                 pictureBox2.BackgroundImage = Properties.Resources.trapezy1;
-
-                //pb.MouseClick += Pb_Click;
-                //pb.MouseDoubleClick += Pb_doubleClick;
-                //pb.MouseMove += Pb_MouseMove;
-                //pb.MouseDown += Pb_MouseDown;
-                //pb.MouseUp += Pb_MouseUp;
-                //pb.KeyDown += Pb_key;
-                //pb.MouseWheel += scrol;
+               
                 picadd = true;
             }
             catch
@@ -446,21 +303,11 @@ namespace Steklo
 
         private void button_trapezoid_Click(object sender, EventArgs e)
         {
-            //panel3.Controls.Clear();
+            
             picadd = false;
             try
             {
-                //pb = new PictureBox();
-                //pb.Width = 250;
-                //pb.Height = 250;
-                //pb.BackgroundImage = Properties.Resources.trapezypryam1;
-                //pb.Left = 114; //this.Width - groupBox1.Width - panel1.Width/2;
-                //pb.Top = 173; //panel1.Top + panel1.Height/2;
-                //pb.BackgroundImageLayout = ImageLayout.Zoom;
-                //pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-                //pictureBox2.BackgroundImage = Properties.Resources.trapezypryam1;
-                //this.panel3.Controls.Add(pb);
-
+                
                 pictureBox3.Controls.Clear();
                 sashCount = 0;
                 vertikLineCount = 0;
@@ -473,14 +320,7 @@ namespace Steklo
                 pictureBox3.SendToBack();
                 pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
                 pictureBox2.BackgroundImage = Properties.Resources.trapezypryam1;
-
-                //pb.MouseClick += Pb_Click;
-                //pb.MouseDoubleClick += Pb_doubleClick;
-                //pb.MouseMove += Pb_MouseMove;
-                //pb.MouseDown += Pb_MouseDown;
-                //pb.MouseUp += Pb_MouseUp;
-                //pb.KeyDown += Pb_key;
-                //pb.MouseWheel += scrol;
+               
                 picadd = true;
             }
             catch
@@ -499,15 +339,15 @@ namespace Steklo
                 pb.Height = 10;
                 pb.Parent = pictureBox3;
                 pb.Image = Properties.Resources.png_line_hor;
-                //pb.BackgroundImage = Properties.Resources.png_line_hor;
-                pb.Left = 175; //this.Width - groupBox1.Width - panel1.Width/2;
-                pb.Top = 173; //panel1.Top + panel1.Height/2;
+                
+                pb.Left = 175; 
+                pb.Top = 173; 
                 pb.BackgroundImageLayout = ImageLayout.Zoom;
                 pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
                 pictureBox2.BackgroundImage = Properties.Resources.png_line_hor;
                 pb.BackColor = Color.Transparent;
                 pb.BringToFront();
-                //this.panel3.Controls.Add(pb);
+                
                 this.pictureBox3.Controls.Add(pb);
                 
                 horizLineCount++;
@@ -517,11 +357,7 @@ namespace Steklo
                 pb.MouseMove += Pb_MouseMove;
                 pb.MouseDown += Pb_MouseDown;
                 pb.MouseUp += Pb_MouseUp;
-                pb.MouseWheel += Pb_Mouse_WheelHoriz;
-                //pb.Paint += PaintHoriz;
-                //pb.Invalidate();
-                //pb.KeyDown += Pb_key;
-                //pb.MouseWheel += scrol;
+                pb.MouseWheel += Pb_Mouse_WheelHoriz;               
                 picadd = true;
             }
             catch
@@ -601,18 +437,14 @@ namespace Steklo
         {
             try
             {
-                                                     
-                
-               // panel3.Controls[0].Parent;
-                
 
                 pb = new PictureBox();
                 pb.Width = 10;
                 pb.Height = 270;
                 pb.Parent = pictureBox3;
                 pb.Image = Properties.Resources.png_line_vert;
-                pb.Left = 175; //this.Width - groupBox1.Width - panel1.Width/2;
-                pb.Top = 173; //panel1.Top + panel1.Height/2;
+                pb.Left = 175; 
+                pb.Top = 173; 
                 pb.BackgroundImageLayout = ImageLayout.Zoom;
                 pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
                 pictureBox2.BackgroundImage = Properties.Resources.png_line_vert;
@@ -627,10 +459,9 @@ namespace Steklo
                 pb.MouseDown += Pb_MouseDown;
                 pb.MouseUp += Pb_MouseUp;
                 pb.MouseWheel += Pb_Mouse_WheelVertik;
-                //pb.KeyDown += Pb_key;
-                //pb.MouseWheel += scrol;
+                
                 picadd = true;
-                //ReverseControls();
+                
             }
             catch
             {
@@ -646,8 +477,8 @@ namespace Steklo
                 pb.Width = 20;
                 pb.Height = 72;
                 pb.Image = Properties.Resources.sash;
-                pb.Left = 175; //this.Width - groupBox1.Width - panel1.Width/2;
-                pb.Top = 173; //panel1.Top + panel1.Height/2;
+                pb.Left = 175; 
+                pb.Top = 173; 
                 pb.BackgroundImageLayout = ImageLayout.Zoom;
                 pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
                 pb.BringToFront();               
@@ -662,14 +493,10 @@ namespace Steklo
                 pb.MouseMove += Pb_MouseMove;
                 pb.MouseDown += Pb_MouseDown;
                 pb.MouseUp += Pb_MouseUp;
-                //pb.Invalidate();
-                //pb.KeyDown += Pb_key;
-                //pb.MouseWheel += scrol;
+                
                 picadd = true;
 
-                //Graphics g = pb.CreateGraphics();
-                //g.DrawImage(Properties.Resources.sash,new Point (114, 173));
-                //pb.Invalidate();
+                
             }
             catch
             {
@@ -706,31 +533,14 @@ namespace Steklo
             
             Width = Convert.ToInt32(textBoxWidth.Text);
             WindowCost();
-            //if (Width < 250 || Width > 2800 || textBoxWidth.Text == "")
-            //{
-            //    MessageBox.Show("Значение ширины должно быть в пределах от 250 до 2800");
-            //    MessageBox.Show("Значение ширины должно быть в пределах от 250 до 2800");
-            //    return;
-            //}
-            //else 
-            //{
-                
-            //}                   
+                              
         }
 
         private void textBoxHeight_TextChanged(object sender, EventArgs e)
         {
             Height = Convert.ToInt32(textBoxHeight.Text);
             WindowCost();
-            //if (Height < 250 || Height > 2000 || textBoxHeight.Text == "")
-            //{
-            //    MessageBox.Show("Значение ширины должно быть в пределах от 250 до 2800");
-            //    return;
-            //}
-            //else
-            //{
-                
-            //}                        
+                                    
         }
 
         private void PaintHoriz(object sender, PaintEventArgs e)
@@ -738,10 +548,7 @@ namespace Steklo
             e.Graphics.DrawImage(Properties.Resources.png_line_hor, new Point(175,173));
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void WindowProject_Load(object sender, EventArgs e)
         {
@@ -768,14 +575,14 @@ namespace Steklo
             if (e.Button == MouseButtons.Right)
             {
                 PictureBox pb = sender as PictureBox;
-                //pb.Width += 5;               
+                               
                 pb.Focus();
 
             }
             if (e.Button == MouseButtons.Left)
             {
                 PictureBox pb = sender as PictureBox;
-                //pb.Width -= 5;
+                
                 pb.Focus();
             }
 
@@ -789,14 +596,14 @@ namespace Steklo
             if (e.Button == MouseButtons.Right)
             {
                 PictureBox pb = sender as PictureBox;
-                //pb.Width += 5;
+                
                 pb.Focus();
 
             }
             if (e.Button == MouseButtons.Left)
             {
                 PictureBox pb = sender as PictureBox;
-                //pb.Width -= 5;
+                
                 pb.Focus();
             }
         }
@@ -822,7 +629,7 @@ namespace Steklo
                         Bitmap save = new Bitmap(width, height);
                         panel3.DrawToBitmap(save, panel3.ClientRectangle);
                         save.Save(pic.FileName);
-                        //pictureBox3.Image.Save(pic.FileName);
+                        
                         MessageBox.Show("Изображение сохранено", "Save");
                     }
                     catch 
@@ -832,13 +639,7 @@ namespace Steklo
 
                 }
             }
-            //int width, height;
-            //width = panel1.Width;
-            //height = panel1.Height;
-            //Bitmap save = new Bitmap(width, height);
-            //panel3.DrawToBitmap(save, panel1.ClientRectangle);
-            //save.Save("save.png");
-            //MessageBox.Show("Изображение сохранено", "Save");
+           
         }
 
         private void comboBox_glazingtype_SelectionChangeCommitted(object sender, EventArgs e)
@@ -855,10 +656,57 @@ namespace Steklo
 
         private void button_addtoBase_Click(object sender, EventArgs e)
         {
+            int windowID;
+            byte[] photo = null;
+
+            idglazingtype = (int)comboBox_glazingtype.SelectedValue;
+            idsill = (int)comboBox_sill.SelectedValue;
+
+            if (customWindowsTableAdapter1.SelectLastID().ToString() == "")
+            {
+                windowID = 1;
+            }
+            else
+            {
+                windowID = (int)(customWindowsTableAdapter1.SelectLastID() + 1);
+            }
+            if (pictureBox3.Image != null || pictureBox3.BackgroundImage != null)
+            {
+                
+                try
+                {
+                    MemoryStream stream = new System.IO.MemoryStream(); 
+                    
+
+                    int width, height;
+                    width = panel3.Width;
+                    height = panel3.Height;
+                    Bitmap save = new Bitmap(width, height);
+                    panel3.DrawToBitmap(save, panel3.ClientRectangle);
+                    
+                    save.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    photo = stream.ToArray();
+                    customWindowsTableAdapter1.Insert(windowID, idsill, idglazingtype, cost ,photo);
+                    MessageBox.Show("Окно добавлено в базу");
+                }
+                catch
+                {
+                    MessageBox.Show("Не удалось добавить в базу");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Сначала спроектируйте окно");
+                return;
+            }
+            
 
         }
 
-        
+
+
+
 
         private void Pb_Vertik_Click(object sender, MouseEventArgs e)
         {
@@ -867,14 +715,14 @@ namespace Steklo
             if (e.Button == MouseButtons.Right)
             {
                 PictureBox pb = sender as PictureBox;
-                //pb.Height += 5;
+                
                 pb.Focus();
 
             }
             if (e.Button == MouseButtons.Left)
             {
                 PictureBox pb = sender as PictureBox;
-                //pb.Height -= 5;
+                
                 pb.Focus();
             }
         }

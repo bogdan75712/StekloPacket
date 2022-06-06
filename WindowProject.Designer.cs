@@ -37,6 +37,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_addtoBase = new System.Windows.Forms.Button();
             this.comboBox_sill = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.comboBox_glazingtype = new System.Windows.Forms.ComboBox();
@@ -63,7 +64,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.glazingTypeTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.GlazingTypeTableAdapter();
             this.windowSillTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.WindowSillTableAdapter();
-            this.button_addtoBase = new System.Windows.Forms.Button();
             this.customWindowsTableAdapter1 = new Steklo.StekloPacketDataSetTableAdapters.CustomWindowsTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -134,7 +134,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(691, 596);
             this.panel3.TabIndex = 5;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // pictureBox3
             // 
@@ -177,6 +176,20 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Меню";
+            // 
+            // button_addtoBase
+            // 
+            this.button_addtoBase.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_addtoBase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_addtoBase.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_addtoBase.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_addtoBase.Location = new System.Drawing.Point(260, 488);
+            this.button_addtoBase.Name = "button_addtoBase";
+            this.button_addtoBase.Size = new System.Drawing.Size(220, 42);
+            this.button_addtoBase.TabIndex = 27;
+            this.button_addtoBase.Text = "Добавить в БД";
+            this.button_addtoBase.UseVisualStyleBackColor = false;
+            this.button_addtoBase.Click += new System.EventHandler(this.button_addtoBase_Click);
             // 
             // comboBox_sill
             // 
@@ -466,20 +479,6 @@
             // windowSillTableAdapter1
             // 
             this.windowSillTableAdapter1.ClearBeforeFill = true;
-            // 
-            // button_addtoBase
-            // 
-            this.button_addtoBase.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_addtoBase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_addtoBase.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_addtoBase.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_addtoBase.Location = new System.Drawing.Point(260, 488);
-            this.button_addtoBase.Name = "button_addtoBase";
-            this.button_addtoBase.Size = new System.Drawing.Size(220, 42);
-            this.button_addtoBase.TabIndex = 27;
-            this.button_addtoBase.Text = "Добавить в БД";
-            this.button_addtoBase.UseVisualStyleBackColor = false;
-            this.button_addtoBase.Click += new System.EventHandler(this.button_addtoBase_Click);
             // 
             // customWindowsTableAdapter1
             // 

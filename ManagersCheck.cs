@@ -31,7 +31,7 @@ namespace Steklo
         {
             dataUsers = this.usersTableAdapter1.GetData();
             comboBox_manager.DataSource = dataUsers.Where(x => x.IDRole > 1).CopyToDataTable();
-            //omboBox_manager.DataSource = usersTableAdapter1.GetData();
+            
             comboBox_manager.DisplayMember = "Login";
             comboBox_manager.ValueMember = "IDUser";
             comboBox_manager.SelectedIndex = 0;
@@ -42,7 +42,7 @@ namespace Steklo
             ordersManagers = this.ordersManagersTableAdapter1.GetData(idManager);
             dataGridView1.DataSource = ordersManagers.CopyToDataTable();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.AllowUserToAddRows = false; 	//Нет дополнительных строк
+            dataGridView1.AllowUserToAddRows = false; 	
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.Columns[0].HeaderText = "Менеджер";
@@ -96,7 +96,7 @@ namespace Steklo
             if (comboBox_period.SelectedIndex == 1)
             {
                 idManager = (int)comboBox_manager.SelectedValue;
-                //MessageBox.Show(startDate.ToString("yyyy-MM-dd"));
+                
                 ordersManagers = this.ordersManagersTableAdapter1.GetDataByMonth(startDate.ToString("yyyy-dd-MM"), idManager);
                 dataGridView1.DataSource = ordersManagers.CopyToDataTable();
                 summ = 0;

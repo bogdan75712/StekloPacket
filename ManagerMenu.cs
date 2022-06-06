@@ -48,5 +48,14 @@ namespace Steklo
             win.ShowDialog();
             this.Show();
         }
+
+        private void button_ViewCustomWindows_Click(object sender, EventArgs e)
+        {
+            ViewCustomWindows view = new ViewCustomWindows();
+            this.Hide();
+            view.StartPosition = FormStartPosition.CenterScreen;
+            view.ShowDialog();
+            this.Show();
+        }
     }
 }

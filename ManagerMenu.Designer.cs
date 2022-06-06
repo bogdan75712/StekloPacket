@@ -37,6 +37,7 @@
             this.button_make_order = new System.Windows.Forms.Button();
             this.button_toOrders = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button_ViewCustomWindows = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -101,7 +102,7 @@
             this.button_make_order.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_make_order.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_make_order.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_make_order.Location = new System.Drawing.Point(113, 171);
+            this.button_make_order.Location = new System.Drawing.Point(113, 155);
             this.button_make_order.Name = "button_make_order";
             this.button_make_order.Size = new System.Drawing.Size(236, 48);
             this.button_make_order.TabIndex = 5;
@@ -115,7 +116,7 @@
             this.button_toOrders.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_toOrders.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_toOrders.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_toOrders.Location = new System.Drawing.Point(113, 234);
+            this.button_toOrders.Location = new System.Drawing.Point(113, 218);
             this.button_toOrders.Name = "button_toOrders";
             this.button_toOrders.Size = new System.Drawing.Size(236, 48);
             this.button_toOrders.TabIndex = 6;
@@ -129,7 +130,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(113, 302);
+            this.button2.Location = new System.Drawing.Point(113, 283);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(236, 48);
             this.button2.TabIndex = 7;
@@ -137,12 +138,27 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button_ViewCustomWindows
+            // 
+            this.button_ViewCustomWindows.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_ViewCustomWindows.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_ViewCustomWindows.Font = new System.Drawing.Font("Candara", 11.76923F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_ViewCustomWindows.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_ViewCustomWindows.Location = new System.Drawing.Point(113, 347);
+            this.button_ViewCustomWindows.Name = "button_ViewCustomWindows";
+            this.button_ViewCustomWindows.Size = new System.Drawing.Size(236, 50);
+            this.button_ViewCustomWindows.TabIndex = 8;
+            this.button_ViewCustomWindows.Text = "Просмотр нестандартных окон";
+            this.button_ViewCustomWindows.UseVisualStyleBackColor = false;
+            this.button_ViewCustomWindows.Click += new System.EventHandler(this.button_ViewCustomWindows_Click);
+            // 
             // ManagerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(468, 520);
+            this.Controls.Add(this.button_ViewCustomWindows);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button_toOrders);
             this.Controls.Add(this.button_make_order);
@@ -168,5 +184,6 @@
         private System.Windows.Forms.Button button_make_order;
         private System.Windows.Forms.Button button_toOrders;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_ViewCustomWindows;
     }
 }

@@ -55,10 +55,7 @@ namespace Steklo
             ShowWindowDetails();
         }
 
-        private void dataGridView1_CurrentCellChanged(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         decimal cost;
         
@@ -75,9 +72,7 @@ namespace Steklo
             dataGridView1.ReadOnly = true;
 
             comboBox_windowstype.Enabled = false;
-            //comboBox_centrsash.Visible = false;
-            //comboBox_centrsash.Enabled = false;
-            //label16.Visible = false;
+            
 
             dataGridView1.Columns[0].HeaderText = "Номер";
             dataGridView1.Columns[1].HeaderText = "Тип окна";
@@ -100,36 +95,36 @@ namespace Steklo
             comboBox_profiletype.DataSource = profileTypeTableAdapter1.GetData();
             comboBox_profiletype.DisplayMember = "Title";
             comboBox_profiletype.ValueMember = "IDProfileType";           
-            //idprofiletype = (int)comboBox_profiletype.SelectedValue;
+            
 
             comboBox_manufacturer.DataSource = manufacturerTableAdapter1.GetData();
             comboBox_manufacturer.DisplayMember = "Title";
             comboBox_manufacturer.ValueMember = "IDManufacturer";           
             comboBox_manufacturer.Enabled = false;
-            //idmanufacturer = (int)comboBox_manufacturer.SelectedValue;
+            
 
             comboBox_glazingtype.DataSource = glazingTypeTableAdapter1.GetData();
             comboBox_glazingtype.DisplayMember = "Title";
             comboBox_glazingtype.ValueMember = "IDGlazingType";
             comboBox_glazingtype.SelectedIndex = 0;
-            //idglazingtype = (int)comboBox_glazingtype.SelectedValue;
+            
 
             comboBox_color.DataSource = colorsTableAdapter1.GetData();
             comboBox_color.DisplayMember = "Title";
             comboBox_color.ValueMember = "IDColor";
             comboBox_color.SelectedIndex = 0;
-            //idcolor = (int)comboBox_color.SelectedValue;
+            
 
             comboBox_sill.DataSource = windowSillTableAdapter1.GetData();
             comboBox_sill.DisplayMember = "Title";
             comboBox_sill.ValueMember = "IDWindowSill";
             comboBox_sill.SelectedIndex = 0;
-            //idsill = (int)comboBox_sill.SelectedValue;
+            
 
             comboBox_leftsash.DataSource = leftSashTableAdapter1.GetData();
             comboBox_leftsash.DisplayMember = "Title";
             comboBox_leftsash.ValueMember = "IDLeftSash";
-            //idleftsash = (int)comboBox_leftsash.SelectedValue;
+            
 
             comboBox_rigthsash.DataSource = rightSashTableAdapter1.GetData();
             comboBox_rigthsash.DisplayMember = "Title";
@@ -138,7 +133,8 @@ namespace Steklo
             comboBox_centrsash.DataSource = mediumSashTableAdapter1.GetDataByMediumSash();
             comboBox_centrsash.DisplayMember = "Title";
             comboBox_centrsash.ValueMember = "IDMediumSash";
-            //comboBox_centrsash.Visible = false;
+            comboBox_centrsash.SelectedValue = 1;
+            
 
             ShowWindowDetails();
         }
@@ -163,16 +159,16 @@ namespace Steklo
             if (idWindowType == 1)
             {
                 comboBox_centrsash.Visible = false;
-                comboBox_centrsash.Enabled = false;
+                comboBox_centrsash.Enabled = true;
                 label16.Visible = false;
                 comboBox_rigthsash.Visible = false;
-                comboBox_rigthsash.Enabled = false;
+                comboBox_rigthsash.Enabled = true;
                 label17.Visible = false;
             }
             if (idWindowType == 2)
             {
                 comboBox_centrsash.Visible = false;
-                comboBox_centrsash.Enabled = false;
+                comboBox_centrsash.Enabled = true;
                 label16.Visible = false;
                 comboBox_rigthsash.Visible = true;
                 comboBox_rigthsash.Enabled = true;
@@ -274,7 +270,7 @@ namespace Steklo
                 
             }
 
-            //windowsTableAdapter1.UpdateWindow();
+            
         }
     }
 }
